@@ -90,14 +90,34 @@ function renderList() {
 
 function find(code) { return state.schools.filter(function (s) { return s.school_code === code; })[0]; }
 
+/*
+ * Google's dialog sandbox blocks window.confirm() (it returns false without showing
+ * anything), so confirmations are shown inside the dialog instead.
+ */
+var pending = null;
+function askConfirm(text, yesLabel, onYes) {
+  pending = onYes;
+  document.getElementById('msg').innerHTML = '<div class="msg bad" role="alertdialog">' + esc(text) +
+    '<div style="margin-top:8px"><button class="primary" id="confirm-yes" onclick="confirmYes()">' + esc(yesLabel) + '</button> ' +
+    '<button onclick="confirmNo()">Cancel</button></div></div>';
+  document.getElementById('msg').scrollIntoView({ block: 'nearest' });
+  document.getElementById('confirm-yes').focus();
+}
+function confirmYes() { var f = pending; pending = null; msg(''); if (f) f(); }
+function confirmNo() { pending = null; msg(''); }
+
 function setStatus(code, status) {
   var words = { ACTIVE: 'Activate', PAUSED: 'Pause', CLOSED: 'Close' };
-  if (status !== 'ACTIVE' && !confirm(words[status] + ' ' + find(code).name + '? Its link will stop accepting responses.')) return;
-  call('adminSetStatus', [code, status], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg(words[status] + 'd ' + r.school.school_code + '.', true); });
+  var run = function () {
+    call('adminSetStatus', [code, status], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg(words[status] + 'd ' + r.school.school_code + '.', true); });
+  };
+  if (status === 'ACTIVE') return run();
+  askConfirm(words[status] + ' ' + find(code).name + ' (' + code + ')? Its link will stop accepting responses.', 'Yes, ' + words[status].toLowerCase() + ' it', run);
 }
 function regen(code) {
-  if (!confirm('Make a new link for ' + find(code).name + '? The current link and QR code stop working immediately. Use this if the link was shared with the wrong people.')) return;
-  call('adminRegenerateToken', [code], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg('New link made for ' + code + '. Share the new link and QR code.', true); if (r.school.link) showLink(code); });
+  askConfirm('Make a new link for ' + find(code).name + ' (' + code + ')? The current link and QR code stop working immediately. Use this if the link was shared with the wrong people.', 'Yes, make a new link', function () {
+    call('adminRegenerateToken', [code], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg('New link made for ' + code + '. Share the new link and QR code.', true); if (r.school.link) showLink(code); });
+  });
 }
 
 function showLink(code) {
