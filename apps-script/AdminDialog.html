@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<!-- QR codes are drawn in this dialog, so the school token never goes to a third-party QR service. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+  :root { color-scheme: light; }
+  body { font: 14px/1.4 Arial, sans-serif; margin: 0; color: #1b2330; background: #fff; }
+  header { display: flex; gap: 8px; align-items: center; padding: 10px 14px; border-bottom: 1px solid #ddd; position: sticky; top: 0; background: #fff; z-index: 1; }
+  header input { flex: 1; padding: 6px 8px; }
+  main { padding: 10px 14px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
+  th { background: #f5f7fa; position: sticky; top: 49px; }
+  .st { font-weight: bold; font-size: 12px; padding: 1px 6px; border-radius: 8px; }
+  .ACTIVE { background: #e3f4e8; color: #1d6b38; } .REGISTERED { background: #fff3d6; color: #7a5a00; }
+  .PAUSED { background: #eee; color: #555; } .CLOSED { background: #fde8e6; color: #9b2a22; }
+  .warn { color: #9b2a22; font-size: 12px; }
+  button { cursor: pointer; padding: 5px 10px; margin: 2px 2px 2px 0; }
+  button.primary { background: #1f5f8b; color: #fff; border: 1px solid #1f5f8b; }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+  form label { display: flex; flex-direction: column; gap: 3px; font-weight: bold; font-size: 13px; }
+  form input, form select { font: inherit; padding: 5px 6px; font-weight: normal; }
+  fieldset { border: 1px solid #ddd; padding: 8px; }
+  fieldset label { flex-direction: row; font-weight: normal; display: inline-flex; margin-right: 10px; }
+  .full { grid-column: 1 / -1; }
+  .err { color: #9b2a22; font-weight: normal; font-size: 12px; }
+  .msg { padding: 8px 10px; margin-bottom: 10px; border-radius: 4px; }
+  .msg.bad { background: #fde8e6; } .msg.good { background: #e3f4e8; }
+  h3 { margin: 4px 0 8px; } .hint { color: #666; font-weight: normal; font-size: 12px; }
+  .link { word-break: break-all; font-family: monospace; background: #f5f7fa; padding: 6px; }
+  #panel { display: none; } #panel.open { display: block; }
+</style>
+</head>
+<body>
+<header>
+  <button class="primary" onclick="openForm()">+ Register school</button>
+  <input id="filter" placeholder="Filter by name, code or district" oninput="renderList()">
+  <span id="count" class="hint"></span>
+</header>
+<main>
+  <div id="msg"></div>
+  <div id="panel"></div>
+  <div id="list">Loading…</div>
+</main>
+<script>
+var state = { schools: [], options: null, siteUrlSet: false };
+
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function msg(text, good) { document.getElementById('msg').innerHTML = text ? '<div class="msg ' + (good ? 'good' : 'bad') + '">' + esc(text) + '</div>' : ''; }
+function call(fn, args, done) {
+  msg('');
+  var r = google.script.run.withSuccessHandler(done).withFailureHandler(function (e) { msg(e.message || String(e)); });
+  r[fn].apply(r, args);
+}
+function load() {
+  call('adminBootstrap', [], function (data) {
+    state = data;
+    if (!data.siteUrlSet) msg('SITE_URL is not set in Script properties, so school links cannot be shown yet.');
+    renderList();
+  });
+}
+function replace(school) {
+  var i = state.schools.findIndex(function (s) { return s.school_code === school.school_code; });
+  if (i >= 0) state.schools[i] = school; else state.schools.push(school);
+  renderList();
+}
+
+function renderList() {
+  var q = document.getElementById('filter').value.toLowerCase();
+  var rows = state.schools.filter(function (s) { return !q || (s.name + ' ' + s.school_code + ' ' + s.district).toLowerCase().indexOf(q) >= 0; });
+  document.getElementById('count').textContent = rows.length + ' of ' + state.schools.length + ' schools';
+  if (!state.schools.length) { document.getElementById('list').innerHTML = '<p>No schools registered yet.</p>'; return; }
+  var h = '<table><tr><th>Code</th><th>School</th><th>District</th><th>Classes</th><th>Status</th><th>Actions</th></tr>';
+  rows.forEach(function (s) {
+    var code = esc(s.school_code);
+    h += '<tr><td>' + code + '</td><td>' + esc(s.name) + '<br><span class="hint">' + esc(s.block_locality) + (s.udise_code ? ' · UDISE ' + esc(s.udise_code) : '') + '</span></td>' +
+      '<td>' + esc(s.district) + '</td><td>' + esc(s.classes_offered.join(', ')) + '</td>' +
+      '<td><span class="st ' + esc(s.status) + '">' + esc(s.status) + '</span>' +
+      (s.missing_for_activation.length ? '<div class="warn">Needs safeguarding lead and referral contact before it can be active</div>' : '') + '</td><td>' +
+      '<button onclick="openForm(\'' + code + '\')">Edit</button>' +
+      (s.status !== 'ACTIVE' ? '<button onclick="setStatus(\'' + code + '\',\'ACTIVE\')">Activate</button>' : '<button onclick="showLink(\'' + code + '\')">Link &amp; QR</button><button onclick="setStatus(\'' + code + '\',\'PAUSED\')">Pause</button>') +
+      (s.status !== 'CLOSED' ? '<button onclick="setStatus(\'' + code + '\',\'CLOSED\')">Close</button>' : '') +
+      '<button onclick="regen(\'' + code + '\')">New link</button></td></tr>';
+  });
+  document.getElementById('list').innerHTML = h + '</table>';
+}
+
+function find(code) { return state.schools.filter(function (s) { return s.school_code === code; })[0]; }
+
+function setStatus(code, status) {
+  var words = { ACTIVE: 'Activate', PAUSED: 'Pause', CLOSED: 'Close' };
+  if (status !== 'ACTIVE' && !confirm(words[status] + ' ' + find(code).name + '? Its link will stop accepting responses.')) return;
+  call('adminSetStatus', [code, status], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg(words[status] + 'd ' + r.school.school_code + '.', true); });
+}
+function regen(code) {
+  if (!confirm('Make a new link for ' + find(code).name + '? The current link and QR code stop working immediately. Use this if the link was shared with the wrong people.')) return;
+  call('adminRegenerateToken', [code], function (r) { if (!r.ok) return msg(r.message); replace(r.school); msg('New link made for ' + code + '. Share the new link and QR code.', true); if (r.school.link) showLink(code); });
+}
+
+function showLink(code) {
+  var s = find(code);
+  var p = document.getElementById('panel');
+  if (!s.link) { msg(s.status === 'ACTIVE' ? 'SITE_URL is not set in Script properties.' : 'Only active schools have a working link.'); return; }
+  p.className = 'open';
+  p.innerHTML = '<h3>Survey link: ' + esc(s.name) + ' (' + esc(s.school_code) + ')</h3>' +
+    '<p class="hint">The page this opens never shows the school name. Share the link or print the QR code for this school only.</p>' +
+    '<div class="link" id="lk">' + esc(s.link) + '</div><p><button onclick="copyLink()">Copy link</button> <a id="dl" download="' + esc(s.school_code) + '_QR.png">Download QR (PNG)</a> <button onclick="closePanel()">Close</button></p><canvas id="qr"></canvas><hr>';
+  drawQr(s.link, s.school_code);
+}
+function copyLink() {
+  var r = document.createRange(); r.selectNodeContents(document.getElementById('lk'));
+  var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand('copy'); msg('Link copied.', true);
+}
+function drawQr(text, code) {
+  var qr = qrcode(0, 'M'); qr.addData(text); qr.make();
+  var n = qr.getModuleCount(), cell = 8, margin = 4 * cell, size = n * cell + 2 * margin;
+  var c = document.getElementById('qr'); c.width = size; c.height = size + 40;
+  var g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.fillStyle = '#000';
+  for (var r = 0; r < n; r++) for (var k = 0; k < n; k++) if (qr.isDark(r, k)) g.fillRect(margin + k * cell, margin + r * cell, cell, cell);
+  // The school code (not the name) under the QR, so printed sheets are not mixed up.
+  g.font = 'bold 20px Arial'; g.textAlign = 'center'; g.fillText(code, size / 2, size + 20);
+  document.getElementById('dl').href = c.toDataURL('image/png');
+}
+function closePanel() { var p = document.getElementById('panel'); p.className = ''; p.innerHTML = ''; }
+
+function opts(list, value) { return '<option value=""></option>' + list.map(function (x) { return '<option' + (x === value ? ' selected' : '') + '>' + esc(x) + '</option>'; }).join(''); }
+function checks(name, list, values) { return list.map(function (x) { return '<label><input type="checkbox" name="' + name + '" value="' + esc(x) + '"' + (values.indexOf(x) >= 0 ? ' checked' : '') + '> ' + esc(x) + '</label>'; }).join(''); }
+function field(label, name, value, extra) { return '<label>' + label + '<input name="' + name + '" value="' + esc(value) + '" ' + (extra || '') + '><span class="err" data-err="' + name + '"></span></label>'; }
+
+function openForm(code) {
+  var s = code ? find(code) : { contacts: {}, classes_offered: [], streams: [] };
+  var c = s.contacts || {};
+  var o = state.options;
+  var p = document.getElementById('panel');
+  p.className = 'open';
+  p.innerHTML = '<h3>' + (code ? 'Edit ' + esc(s.school_code) : 'Register a school') + '</h3>' +
+    '<form id="f" onsubmit="return save(event, ' + (code ? "'" + esc(code) + "'" : 'null') + ')">' +
+    field('School name', 'name', s.name) +
+    field('UDISE code <span class="hint">(11 digits, recommended)</span>', 'udise_code', s.udise_code, 'inputmode="numeric"') +
+    '<label>District<select name="district"' + (code ? ' disabled' : '') + '>' + opts(o.districts, s.district) + '</select><span class="err" data-err="district"></span></label>' +
+    field('Block / locality', 'block_locality', s.block_locality) +
+    '<label>In Shillong city?<select name="is_shillong_city">' + opts(['Yes', 'No'], s.is_shillong_city) + '</select><span class="err" data-err="is_shillong_city"></span></label>' +
+    '<label>Area type<select name="area_type">' + opts(o.areas, s.area_type) + '</select><span class="err" data-err="area_type"></span></label>' +
+    '<label>Management<select name="management">' + opts(o.management, s.management) + '</select><span class="err" data-err="management"></span></label>' +
+    '<fieldset><legend>Classes offered</legend>' + checks('classes_offered', o.classes.map(String), s.classes_offered.map(String)) + '<div class="err" data-err="classes_offered"></div></fieldset>' +
+    '<fieldset class="full"><legend>Streams (if Classes 11–12)</legend>' + checks('streams', o.streams, s.streams) + '<div class="err" data-err="streams"></div></fieldset>' +
+    field('Survey opens <span class="hint">(optional)</span>', 'survey_opens', s.survey_opens, 'type="date"') +
+    field('Survey closes <span class="hint">(optional)</span>', 'survey_closes', s.survey_closes, 'type="date"') +
+    '<h3 class="full">School contact <span class="hint">(restricted tab)</span></h3>' +
+    field('Contact person', 'contact_person', c.contact_person) + field('Phone', 'contact_phone', c.contact_phone, 'type="tel"') +
+    field('Email', 'contact_email', c.contact_email, 'type="email"') + '<span></span>' +
+    '<h3 class="full">Safeguarding <span class="hint">(needed before the link can accept responses)</span></h3>' +
+    field('Safeguarding lead name', 'safeguarding_lead_name', c.safeguarding_lead_name) + field('Safeguarding lead phone', 'safeguarding_lead_phone', c.safeguarding_lead_phone, 'type="tel"') +
+    field('Referral contact (name / organisation)', 'referral_name', c.referral_name) + field('Referral contact phone', 'referral_phone', c.referral_phone, 'type="tel"') +
+    '<div class="full"><button class="primary" type="submit">' + (code ? 'Save changes' : 'Register school') + '</button> <button type="button" onclick="closePanel()">Cancel</button></div></form><hr>';
+  if (code) p.querySelector('select[name=district]').insertAdjacentHTML('afterend', '<input type="hidden" name="district" value="' + esc(s.district) + '">');
+}
+
+function save(ev, code) {
+  ev.preventDefault();
+  var f = document.getElementById('f');
+  var data = {};
+  Array.prototype.forEach.call(f.elements, function (el) {
+    if (!el.name || el.disabled) return;
+    if (el.type === 'checkbox') { data[el.name] = data[el.name] || []; if (el.checked) data[el.name].push(el.value); }
+    else data[el.name] = el.value;
+  });
+  f.querySelectorAll('[data-err]').forEach(function (e) { e.textContent = ''; });
+  var done = function (r) {
+    if (!r.ok) {
+      msg(r.message);
+      Object.keys(r.errors || {}).forEach(function (k) { var e = f.querySelector('[data-err="' + k + '"]'); if (e) e.textContent = r.errors[k]; });
+      return;
+    }
+    replace(r.school); closePanel();
+    msg((code ? 'Saved ' : 'Registered ') + r.school.school_code + (r.school.status === 'ACTIVE' ? ' — active.' : ' — add safeguarding contacts to activate.'), true);
+  };
+  if (code) call('adminUpdate', [code, data], done); else call('adminRegister', [data], done);
+  return false;
+}
+
+load();
+</script>
+</body>
+</html>

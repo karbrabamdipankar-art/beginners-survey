@@ -1,0 +1,47 @@
+# /apps-script — school registry and public API
+
+One Apps Script project, **bound to the research spreadsheet** `Beginners_Research_Data`.
+
+| File | What it does |
+|---|---|
+| `Core.js` | All logic: form checks, school codes, 256-bit tokens, activation rule, `school_info`. No Google services, so it is tested locally. |
+| `Store.js` | Reads and writes the tabs; `setupTabs_` creates them. |
+| `Api.js` | Public web app: `GET ?action=school_info&s=<token>` only. `submit` comes in M3. |
+| `Admin.js` + `AdminDialog.html` | Staff admin inside the spreadsheet (menu **The Beginners → School admin**). Allow-listed accounts only (DEC-26). |
+| `test/core.test.mjs` | `node --test "apps-script/test/*.test.mjs"` (also runs in GitHub Actions). |
+
+## First-time setup (about 15 minutes)
+
+Use the **organisation Google Workspace account**, not a personal Gmail.
+
+1. **Spreadsheet.** In Google Drive, create a spreadsheet named `Beginners_Research_Data`. Share it only with named research staff.
+2. **Script.** In the spreadsheet: *Extensions → Apps Script*. Delete the sample `Code.gs`. Add one script file per `.js` file here (same names; `.gs` is fine), and an HTML file named `AdminDialog`. Paste the contents. In *Project Settings*, tick "Show appsscript.json" and paste `appsscript.json`.
+   - Or with [clasp](https://github.com/google/clasp): `clasp clone <scriptId>` into this folder, then `clasp push`. Do not commit `.clasp.json` or `.clasprc.json`.
+3. **Script properties** (*Project Settings → Script properties*):
+   - `ADMIN_EMAILS`: comma-separated Google accounts allowed to register schools.
+   - `SITE_URL`: the GitHub Pages address, e.g. `https://<org>.github.io/<repo>/`.
+4. **Tabs.** Reload the spreadsheet. Menu *The Beginners → Set up / repair tabs*. Approve the permissions (this spreadsheet only, the dialog, your email). This creates `Schools`, `School_Contacts` (hidden, protected), `Audit`, `Config` (filled with the four instruments).
+5. **Public web app.** *Deploy → New deployment → Web app*. Execute as: **Me**. Who has access: **Anyone**. Copy the URL ending in `/exec`.
+6. **Connect the site.** In the GitHub repository: *Settings → Secrets and variables → Actions → Variables → New variable* `API_URL` = the `/exec` URL. Re-run the Pages workflow.
+7. **Check.** Register a test school with safeguarding contacts, open its link on a phone: you should see "Are you a student or a teacher?" and never the school name. Then *Close* the test school.
+
+After code changes: *Deploy → Manage deployments → Edit → New version*, so the `/exec` URL stays the same.
+
+## How staff use it
+
+*The Beginners → School admin* opens the dialog:
+- **Register school**: details, school contact, safeguarding lead and referral contact. With both safeguarding contacts the school is **ACTIVE** at once; without them it stays **REGISTERED** and its link does not work.
+- **Link & QR**: copy the link or download a QR code (PNG, school code printed underneath). The QR is drawn in the dialog; the link never goes to an outside QR service.
+- **Pause / Close / Activate**: a paused or closed link shows "This link is not open". Changes act within seconds.
+- **New link**: if a link was shared with the wrong people. The old link and QR stop working at once; the school keeps its code and data.
+- **Edit**: anything except the district (the school code is based on it).
+
+Every action is written to the `Audit` tab with the staff account and time.
+
+## Rules this code enforces
+
+- `school_info` returns only `status`, `classes`, `instruments`. Never name, code, district, contacts or dates (DEC-23). Unknown, paused, closed and not-yet-active tokens all return `unavailable`.
+- A school whose instruments need safeguarding (`Config.safeguarding_required`) cannot be ACTIVE without a safeguarding lead (name, phone) and referral contact (name, phone). Removing them later sets it back to REGISTERED.
+- Duplicate UDISE codes are refused. Tokens are 256 random bits.
+- Survey dates are compared in India time; outside the window the link says not yet open / closed.
+- Instruments can be paused centrally in the `Config` tab (status other than ACTIVE).

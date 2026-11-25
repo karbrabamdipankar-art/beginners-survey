@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "beginners.instrument/1",
+  "title": "The Beginners platform instrument definition",
+  "type": "object",
+  "required": ["format","kind","instrument_id","version","instrument_version_id","title","respondent_type","language","status","approval","settings","sections"],
+  "properties": {
+    "format": {"const": "beginners.instrument/1"},
+    "kind": {"enum": ["survey","assessment"]},
+    "instrument_id": {"type": "string", "pattern": "^[A-Z]+_[0-9]+_[0-9]+$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "instrument_version_id": {"type": "string"},
+    "title": {"type": "string", "minLength": 1},
+    "respondent_type": {"enum": ["student","teacher","parent","counsellor"]},
+    "class_range": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 12}},
+    "language": {"type": "string"},
+    "status": {"enum": ["DRAFT","APPROVED_BASELINE_ARCHIVE","APPROVED_FOR_PILOT","APPROVED_FOR_FIELDWORK","RETIRED"]},
+    "approval": {"type": "object", "required": ["approved_by","approved_on","basis"]},
+    "wording_origin": {"type": "string"},
+    "settings": {"type": "object", "required": ["consent_required","safeguarding_required","answer_statuses"]},
+    "change_log": {"type": "array", "items": {"type": "object", "required": ["question_id","change_type","detail"]}},
+    "scoring": {"description": "Reserved for kind=assessment: scales, keys, reverse items, norm set references. Must be absent for surveys."},
+    "report": {"description": "Reserved for kind=assessment: versioned report template reference."},
+    "sections": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["code","title","questions"],
+      "properties": {
+        "code": {"type": "string"}, "title": {"type": "string"}, "notice": {"type": "string"},
+        "questions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/question"}}
+      }}}
+  },
+  "$defs": {
+    "option": {"type": "object", "required": ["code","label","role","exclusive","specify"],
+      "properties": {"code": {"type": ["integer","string"]}, "label": {"type": "string","minLength":1},
+        "role": {"enum": ["VALUE","NOT_SURE","PREFER_NOT_TO_ANSWER","NOT_APPLICABLE","OTHER","VARIES_DEPENDS","NONE_EXCLUSIVE"]},
+        "exclusive": {"type": "boolean"}, "specify": {"type": "boolean"}}},
+    "condition": {"oneOf": [
+      {"type": "object", "required": ["q","in"], "properties": {"q": {"type":"string"}, "in": {"type":"array","minItems":1}}},
+      {"type": "object", "required": ["all"], "properties": {"all": {"type":"array","items":{"$ref":"#/$defs/condition"}}}},
+      {"type": "object", "required": ["any"], "properties": {"any": {"type":"array","items":{"$ref":"#/$defs/condition"}}}}]},
+    "question": {"type": "object", "required": ["id","uid","variable","text","type","required","sensitivity","scoring_category"],
+      "properties": {
+        "id": {"type":"string"}, "uid": {"type":"string"}, "variable": {"type":"string","pattern":"^[a-z][a-z0-9_]*$"},
+        "text": {"type":"string","minLength":1}, "type": {"enum":["single","multi","text","number","matrix"]},
+        "required": {"type":"boolean"}, "options": {"type":"array","items":{"$ref":"#/$defs/option"}},
+        "rows": {"type":"array","items":{"type":"object","required":["variable","uid","label"]}},
+        "max_select": {"type":"integer","minimum":1},
+        "options_from": {"type":"object","required":["q","use"],"description":"Options are the responses the respondent selected in question q; static options are appended."}, "ordinal": {"type":"boolean"},
+        "show_if": {"$ref":"#/$defs/condition"},
+        "sensitivity": {"enum":["STANDARD","PERSONAL","SENSITIVE","HIGHLY_SENSITIVE"]},
+        "scoring_category": {"enum":["DESCRIPTIVE","CONTEXTUAL","RESEARCH_INDICATOR","PROVISIONAL_SCALE_ITEM","VALIDATED_SCALE_ITEM","ASSESSMENT_ITEM","NOT_SCORABLE"]},
+        "constructs": {"type":"array","items":{"type":"string"}}
+      },
+      "allOf": [
+        {"if": {"properties": {"type": {"enum":["single","multi","matrix"]}}}, "then": {"required": ["options"]}},
+        {"if": {"properties": {"type": {"const":"matrix"}}}, "then": {"required": ["rows"]}}
+      ]}
+  }
+}

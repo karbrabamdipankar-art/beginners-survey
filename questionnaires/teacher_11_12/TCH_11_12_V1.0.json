@@ -1,0 +1,3964 @@
+{
+  "format": "beginners.instrument/1",
+  "kind": "survey",
+  "instrument_id": "TCH_11_12",
+  "version": "1.0",
+  "instrument_version_id": "TCH_11_12_V1.0",
+  "title": "The Beginners — Classes 11–12 Teacher Survey",
+  "respondent_type": "teacher",
+  "class_range": [
+    11,
+    12
+  ],
+  "language": "en",
+  "status": "RETIRED",
+  "approval": {
+    "approved_by": "Project owner (The Beginners)",
+    "approved_on": "2026-11-22",
+    "basis": "DEC-03: respondent wording drafted by Claude from the approved question-focus register and adopted under the project owner's delegated authority (2026-11-22). Must be cognitively pretested with 3–5 teachers before full fieldwork."
+  },
+  "wording_origin": "DRAFTED_FROM_FOCUS_REGISTER",
+  "source": {
+    "file": "The_Beginners_Class_11_12_Teacher_Questionnaire.xlsx",
+    "sha256": "cf3efc637976a225542d8644fc6be74fa6908d13d936f5b95db0e2db5a6dc1f5"
+  },
+  "settings": {
+    "estimated_minutes": 20,
+    "consent_required": true,
+    "assent_required": false,
+    "safeguarding_required": true,
+    "research_permission_gate": null,
+    "contact_request_questions": [],
+    "answer_statuses": [
+      "ANSWERED",
+      "SKIPPED",
+      "NOT_DISPLAYED",
+      "PREFER_NOT_TO_ANSWER",
+      "NOT_SURE",
+      "NOT_APPLICABLE",
+      "INCOMPLETE",
+      "INVALID"
+    ]
+  },
+  "notes": [
+    "Question IDs, variable names, response types and option order/meaning from source; wording drafted.",
+    "Retired 2026-11-22 before any deployment; superseded by TCH_11_12_V1.1 (DEC-21)."
+  ],
+  "sections": [
+    {
+      "code": "A",
+      "title": "Teacher Profile",
+      "questions": [
+        {
+          "id": "TCH_A01",
+          "uid": "TCH_11_12.TCH_A01",
+          "variable": "school_district",
+          "text": "In which district is your school located?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "East Khasi Hills (outside Shillong city)",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Eastern West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "South West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Ri-Bhoi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "West Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "East Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "East Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "South Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "North Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "South West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "School district"
+        },
+        {
+          "id": "TCH_A02",
+          "uid": "TCH_11_12.TCH_A02",
+          "variable": "school_management_type",
+          "text": "What type of management does your school have?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Government",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Government-aided",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Private",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "source_focus": "School management type"
+        },
+        {
+          "id": "TCH_A03",
+          "uid": "TCH_11_12.TCH_A03",
+          "variable": "classes_taught",
+          "text": "Which classes do you currently teach? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Class 11",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Class 12",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Classes taught"
+        },
+        {
+          "id": "TCH_A04",
+          "uid": "TCH_11_12.TCH_A04",
+          "variable": "streams_taught",
+          "text": "Which streams do you currently teach? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Commerce",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Arts / Humanities",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Vocational / Technical",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Streams taught"
+        },
+        {
+          "id": "TCH_A05",
+          "uid": "TCH_11_12.TCH_A05",
+          "variable": "primary_subject_taught",
+          "text": "What is the main subject you teach in Classes 11–12?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mathematics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Physics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Chemistry",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Biology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Computer Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Accountancy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Business Studies",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Economics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "History",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Political Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Geography",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 13,
+              "label": "Sociology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 14,
+              "label": "Education",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 15,
+              "label": "Psychology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 16,
+              "label": "Philosophy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 17,
+              "label": "Khasi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 18,
+              "label": "Garo",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 19,
+              "label": "Vocational/Technical",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "source_focus": "Primary subject taught"
+        },
+        {
+          "id": "TCH_A06",
+          "uid": "TCH_11_12.TCH_A06",
+          "variable": "total_teaching_experience",
+          "text": "How many years of teaching experience do you have in total?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Less than 1 year",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "1–3 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "4–6 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "7–10 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "11–15 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "More than 15 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Total teaching experience"
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "title": "Teaching Assignment and Curriculum",
+      "questions": [
+        {
+          "id": "TCH_B01",
+          "uid": "TCH_11_12.TCH_B01",
+          "variable": "typical_class_size",
+          "text": "What is the typical number of students in the Class 11–12 sections you teach?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Fewer than 20",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "20–30",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "31–40",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "41–50",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "More than 50",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Typical class size"
+        },
+        {
+          "id": "TCH_B02",
+          "uid": "TCH_11_12.TCH_B02",
+          "variable": "curriculum_time_manageability",
+          "text": "How manageable is it to teach the full curriculum of your subject in the time available?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very manageable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Manageable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Difficult",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very difficult",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Curriculum time manageability"
+        },
+        {
+          "id": "TCH_B03",
+          "uid": "TCH_11_12.TCH_B03",
+          "variable": "syllabus_completion_percentage",
+          "text": "By this point in the academic year, approximately what percentage of the syllabus for your main subject has been completed?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Less than 25%",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "25–49%",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "50–74%",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "75–89%",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "90–100%",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 99,
+              "label": "Not applicable",
+              "role": "NOT_APPLICABLE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Syllabus completion percentage"
+        },
+        {
+          "id": "TCH_B04",
+          "uid": "TCH_11_12.TCH_B04",
+          "variable": "syllabus_completion_obstacles",
+          "text": "What most affects completing the syllabus on time? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Insufficient number of periods",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Students' weak foundations from earlier classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Large class size",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Irregular student attendance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Shortage of teachers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Administrative or non-teaching duties",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Lack of teaching materials",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Lack of practical or laboratory facilities",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Interruptions to the school calendar (holidays, events, weather, disruptions)",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 0,
+              "label": "None — the syllabus is usually completed on time",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Obstacles to syllabus completion"
+        },
+        {
+          "id": "TCH_B05",
+          "uid": "TCH_11_12.TCH_B05",
+          "variable": "teaching_plan_modification_frequency",
+          "text": "How often do you need to change your teaching plan because of time, student needs or other constraints?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of teaching-plan modification"
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "title": "Student Academic Performance and Learning Foundations",
+      "questions": [
+        {
+          "id": "TCH_C01",
+          "uid": "TCH_11_12.TCH_C01",
+          "variable": "observed_overall_academic_performance",
+          "text": "Overall, how would you describe the academic performance of the Class 11–12 students you teach?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_B01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Below average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Poor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely between students",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Observed overall academic performance"
+        },
+        {
+          "id": "TCH_C02",
+          "uid": "TCH_11_12.TCH_C02",
+          "variable": "fundamental_concept_difficulty_frequency",
+          "text": "How often do your students have difficulty with the fundamental concepts of your subject?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of fundamental concept difficulties"
+        },
+        {
+          "id": "TCH_C03",
+          "uid": "TCH_11_12.TCH_C03",
+          "variable": "observed_learning_difficulties",
+          "text": "Which learning difficulties do you observe most often among your students? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Weak foundation from earlier classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Remembering what was taught",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Applying concepts to questions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Numerical or calculation skills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Language or subject terminology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Understanding what a question is asking",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Writing answers clearly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Analytical thinking",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Connecting different topics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Practical application",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Observed learning difficulties"
+        },
+        {
+          "id": "TCH_C04",
+          "uid": "TCH_11_12.TCH_C04",
+          "variable": "class11_student_preparedness",
+          "text": "How well prepared are students for Class 11 learning when they enter from Class 10?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very well prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Well prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Poorly prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very poorly prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely between students",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Class 11 student preparedness"
+        },
+        {
+          "id": "TCH_C05",
+          "uid": "TCH_11_12.TCH_C05",
+          "variable": "previous_concept_revision_frequency",
+          "text": "How often do you need to re-teach concepts from earlier classes before students can follow the current topic?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost every lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of revising prerequisite concepts"
+        },
+        {
+          "id": "TCH_C06",
+          "uid": "TCH_11_12.TCH_C06",
+          "variable": "unfamiliar_application_difficulty",
+          "text": "How often do students have difficulty applying what they have learned to questions they have not seen before?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Difficulty applying concepts to unfamiliar questions"
+        },
+        {
+          "id": "TCH_C07",
+          "uid": "TCH_11_12.TCH_C07",
+          "variable": "subject_learning_aspect_ratings",
+          "text": "Thinking about the students you teach in your main subject, how would you rate them on each of the following?",
+          "type": "matrix",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B08"
+          ],
+          "rows": [
+            {
+              "variable": "concept_understanding_rating",
+              "uid": "TCH_11_12.TCH_C07.concept_understanding_rating",
+              "label": "Understanding of concepts"
+            },
+            {
+              "variable": "subject_knowledge_rating",
+              "uid": "TCH_11_12.TCH_C07.subject_knowledge_rating",
+              "label": "Subject knowledge"
+            },
+            {
+              "variable": "problem_solving_rating",
+              "uid": "TCH_11_12.TCH_C07.problem_solving_rating",
+              "label": "Problem-solving"
+            },
+            {
+              "variable": "analytical_thinking_rating",
+              "uid": "TCH_11_12.TCH_C07.analytical_thinking_rating",
+              "label": "Analytical thinking"
+            },
+            {
+              "variable": "written_expression_rating",
+              "uid": "TCH_11_12.TCH_C07.written_expression_rating",
+              "label": "Written expression"
+            },
+            {
+              "variable": "practical_application_rating",
+              "uid": "TCH_11_12.TCH_C07.practical_application_rating",
+              "label": "Practical application"
+            }
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Poor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very poor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 99,
+              "label": "Not applicable",
+              "role": "NOT_APPLICABLE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Ratings of subject learning aspects"
+        }
+      ]
+    },
+    {
+      "code": "D",
+      "title": "Teaching Practices and Classroom Engagement",
+      "questions": [
+        {
+          "id": "TCH_D01",
+          "uid": "TCH_11_12.TCH_D01",
+          "variable": "teaching_methods_used",
+          "text": "Which teaching methods do you use regularly? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Lecture or explanation",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Textbook and blackboard work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Presentations or videos",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Real-world examples or demonstrations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Practical or laboratory work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Group discussion",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Problem-solving exercises",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Projects",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Question-and-answer sessions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "source_focus": "Teaching methods used"
+        },
+        {
+          "id": "TCH_D02",
+          "uid": "TCH_11_12.TCH_D02",
+          "variable": "in_lesson_understanding_checks",
+          "text": "How often do you check whether students have understood during a lesson (for example, by asking questions or giving short tasks)?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost every lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of checking understanding during lessons"
+        },
+        {
+          "id": "TCH_D03",
+          "uid": "TCH_11_12.TCH_D03",
+          "variable": "response_to_student_non_understanding",
+          "text": "When students do not understand a topic, what do you usually do? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Explain it in a different way",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Give more examples",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Break it into smaller steps",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Link it to concepts learned earlier",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Use diagrams or other visuals",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Use a practical demonstration",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Give practice questions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Give individual help",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Hold remedial or extra classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Responses when students do not understand"
+        },
+        {
+          "id": "TCH_D04",
+          "uid": "TCH_11_12.TCH_D04",
+          "variable": "mixed_ability_classroom_support_effectiveness",
+          "text": "How effectively are you able to support students of different ability levels in the same class?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very effectively",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Effectively",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Slightly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Not effectively at all",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Effectiveness of supporting mixed-ability classes"
+        },
+        {
+          "id": "TCH_D05",
+          "uid": "TCH_11_12.TCH_D05",
+          "variable": "student_classroom_participation_frequency",
+          "text": "How often do students actively participate in your lessons (asking questions, answering, discussing)?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of student classroom participation"
+        },
+        {
+          "id": "TCH_D06",
+          "uid": "TCH_11_12.TCH_D06",
+          "variable": "perceived_student_participation_barriers",
+          "text": "What do you think most stops students from participating in class? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Low confidence",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Fear of giving a wrong answer or being judged",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Difficulty understanding the lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Language",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Low interest in the subject",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Large class size",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Limited class time",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Teaching methods that are not interactive",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Perceived barriers to student participation"
+        }
+      ]
+    },
+    {
+      "code": "E",
+      "title": "Assessment, Feedback and Academic Monitoring",
+      "questions": [
+        {
+          "id": "TCH_E01",
+          "uid": "TCH_11_12.TCH_E01",
+          "variable": "formal_assessment_frequency",
+          "text": "How often do you conduct formal assessments (tests or graded tasks) for your classes?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Weekly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Every two weeks",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Monthly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Every 2–3 months",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Once per term",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Formal assessment frequency"
+        },
+        {
+          "id": "TCH_E02",
+          "uid": "TCH_11_12.TCH_E02",
+          "variable": "assessment_methods_used",
+          "text": "Which assessment methods do you use? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Written tests",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Oral questions or tests",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Homework or assignments",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Practical assessments",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Projects or presentations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Class participation",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Quizzes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "source_focus": "Assessment methods used"
+        },
+        {
+          "id": "TCH_E03",
+          "uid": "TCH_11_12.TCH_E03",
+          "variable": "improvement_feedback_frequency",
+          "text": "How often do you give students feedback that explains how they can improve (not only marks)?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of improvement-focused feedback"
+        },
+        {
+          "id": "TCH_E04",
+          "uid": "TCH_11_12.TCH_E04",
+          "variable": "response_to_repeated_poor_performance",
+          "text": "When a student performs poorly repeatedly, what do you usually do? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Discuss it with the student individually",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Identify the concepts the student is struggling with",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Give extra explanation or practice",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Arrange remedial support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Monitor the student's progress more closely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Consult other teachers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Contact parents or guardians",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Refer the student for counselling or support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Response to repeated poor performance"
+        },
+        {
+          "id": "TCH_E05",
+          "uid": "TCH_11_12.TCH_E05",
+          "variable": "structured_academic_support_system_effectiveness",
+          "text": "How effective is your school's structured system for supporting students who are struggling academically?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very effective",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Effective",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately effective",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Ineffective",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "There is no structured system",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Effectiveness of structured academic support system"
+        }
+      ]
+    },
+    {
+      "code": "F",
+      "title": "Student Motivation and Wellbeing",
+      "questions": [
+        {
+          "id": "TCH_F01",
+          "uid": "TCH_11_12.TCH_F01",
+          "variable": "observed_student_academic_motivation",
+          "text": "Overall, how would you describe your students' motivation to study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very high",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "High",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely between students",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Observed student academic motivation"
+        },
+        {
+          "id": "TCH_F02",
+          "uid": "TCH_11_12.TCH_F02",
+          "variable": "observed_academic_interest_loss",
+          "text": "How often do you notice students losing interest in their studies?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of observed loss of academic interest"
+        },
+        {
+          "id": "TCH_F03",
+          "uid": "TCH_11_12.TCH_F03",
+          "variable": "observed_student_academic_confidence",
+          "text": "Overall, how would you describe your students' confidence in their academic ability?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very high",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "High",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely between students",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Observed student academic confidence"
+        },
+        {
+          "id": "TCH_F04",
+          "uid": "TCH_11_12.TCH_F04",
+          "variable": "perceived_sources_of_academic_pressure",
+          "text": "What do you think are the main sources of academic pressure for your students? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Examinations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Family expectations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Comparison with peers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Difficulty of subjects",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Size of the syllabus",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Uncertainty about higher education",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Uncertainty about careers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Financial concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Fear of disappointing others",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Perceived sources of academic pressure"
+        },
+        {
+          "id": "TCH_F05",
+          "uid": "TCH_11_12.TCH_F05",
+          "variable": "teacher_preparedness_for_student_support",
+          "text": "How well prepared do you feel to support students who are facing academic or personal difficulties?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very adequately prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Adequately prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Inadequately prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Not prepared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Teacher preparedness to support students"
+        },
+        {
+          "id": "TCH_F06",
+          "uid": "TCH_11_12.TCH_F06",
+          "variable": "school_counselling_service_availability",
+          "text": "What counselling support is available to students at your school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "A full-time counsellor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A part-time or visiting counsellor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Referral to an external counsellor or service",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Informal support from teachers only",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "No counselling support",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Availability of school counselling services"
+        }
+      ],
+      "notice": "You can choose not to answer any question in this section.",
+      "notice_origin": "PLATFORM"
+    },
+    {
+      "code": "G",
+      "title": "School Environment and Institutional Support",
+      "questions": [
+        {
+          "id": "TCH_G01",
+          "uid": "TCH_11_12.TCH_G01",
+          "variable": "school_facility_adequacy_matrix",
+          "text": "How adequate are the following facilities at your school for Class 11–12 teaching?",
+          "type": "matrix",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H05"
+          ],
+          "rows": [
+            {
+              "variable": "classroom_space_furniture_adequacy",
+              "uid": "TCH_11_12.TCH_G01.classroom_space_furniture_adequacy",
+              "label": "Classroom space and furniture"
+            },
+            {
+              "variable": "electricity_adequacy",
+              "uid": "TCH_11_12.TCH_G01.electricity_adequacy",
+              "label": "Electricity supply"
+            },
+            {
+              "variable": "library_material_adequacy",
+              "uid": "TCH_11_12.TCH_G01.library_material_adequacy",
+              "label": "Library and reading materials"
+            },
+            {
+              "variable": "practical_facility_adequacy",
+              "uid": "TCH_11_12.TCH_G01.practical_facility_adequacy",
+              "label": "Science / practical facilities"
+            },
+            {
+              "variable": "computer_facility_adequacy",
+              "uid": "TCH_11_12.TCH_G01.computer_facility_adequacy",
+              "label": "Computer facilities"
+            },
+            {
+              "variable": "internet_connectivity_adequacy",
+              "uid": "TCH_11_12.TCH_G01.internet_connectivity_adequacy",
+              "label": "Internet connectivity"
+            },
+            {
+              "variable": "digital_display_adequacy",
+              "uid": "TCH_11_12.TCH_G01.digital_display_adequacy",
+              "label": "Projector or digital display"
+            }
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Adequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Partially adequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Inadequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Not available",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 99,
+              "label": "Not applicable",
+              "role": "NOT_APPLICABLE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": false,
+          "source_focus": "Adequacy of school facilities"
+        },
+        {
+          "id": "TCH_G02",
+          "uid": "TCH_11_12.TCH_G02",
+          "variable": "school_management_teacher_support",
+          "text": "How well does your school management support teachers in their work?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very adequately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Adequately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Inadequately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very inadequately",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "School management support for teachers"
+        },
+        {
+          "id": "TCH_G03",
+          "uid": "TCH_11_12.TCH_G03",
+          "variable": "teacher_academic_coordination_frequency",
+          "text": "How often do teachers at your school meet or coordinate on academic matters (planning, student progress, assessment)?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of academic coordination among teachers"
+        },
+        {
+          "id": "TCH_G04",
+          "uid": "TCH_11_12.TCH_G04",
+          "variable": "higher_secondary_teacher_staffing_adequacy",
+          "text": "How adequate is the number of higher-secondary (Class 11–12) teachers at your school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "More than adequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Adequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Slightly inadequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Significantly inadequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Adequacy of higher-secondary teacher staffing"
+        },
+        {
+          "id": "TCH_G05",
+          "uid": "TCH_11_12.TCH_G05",
+          "variable": "administrative_workload_teaching_impact",
+          "text": "How often does administrative or non-teaching work affect your teaching?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of administrative workload affecting teaching"
+        },
+        {
+          "id": "TCH_G06",
+          "uid": "TCH_11_12.TCH_G06",
+          "variable": "school_student_support_services",
+          "text": "Which student support services are available at your school? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Remedial classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Academic counselling",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Career guidance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Emotional wellbeing support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Scholarship guidance or support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Additional learning classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Peer mentoring",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Parent–teacher meetings",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Referral to external services",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "source_focus": "Student support services available at school"
+        }
+      ]
+    },
+    {
+      "code": "H",
+      "title": "Teaching Resources and Digital Learning",
+      "questions": [
+        {
+          "id": "TCH_H01",
+          "uid": "TCH_11_12.TCH_H01",
+          "variable": "teaching_material_adequacy",
+          "text": "How sufficient are the teaching and learning materials available for your subject?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Fully sufficient",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mostly sufficient",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Partially sufficient",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Insufficient",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Severely insufficient",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Adequacy of teaching materials"
+        },
+        {
+          "id": "TCH_H02",
+          "uid": "TCH_11_12.TCH_H02",
+          "variable": "available_digital_teaching_resources",
+          "text": "Which digital teaching resources are available to you at school? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_I03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Desktop computer",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Laptop",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Smartphone or tablet",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Projector or digital display",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Computer laboratory",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Internet connection",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Digital learning platform",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Educational videos or online materials",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "AI tools",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "source_focus": "Digital teaching resources available"
+        },
+        {
+          "id": "TCH_H03",
+          "uid": "TCH_11_12.TCH_H03",
+          "variable": "school_internet_reliability",
+          "text": "How reliable is the internet connection at your school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very reliable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mostly reliable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes unreliable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Frequently unreliable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "No reliable internet access",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Reliability of school internet"
+        },
+        {
+          "id": "TCH_H04",
+          "uid": "TCH_11_12.TCH_H04",
+          "variable": "digital_teaching_frequency",
+          "text": "How often do you use digital tools or resources in your teaching?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_I03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost every lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of digital teaching"
+        },
+        {
+          "id": "TCH_H05",
+          "uid": "TCH_11_12.TCH_H05",
+          "variable": "digital_teaching_confidence",
+          "text": "How confident are you in using digital tools for teaching?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_I05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Slightly confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Not confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Teacher confidence using digital teaching"
+        },
+        {
+          "id": "TCH_H06",
+          "uid": "TCH_11_12.TCH_H06",
+          "variable": "teacher_ai_familiarity",
+          "text": "How familiar are you with AI tools (for example, chatbots or AI-based learning apps)?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_I05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "I use them regularly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "I use them occasionally",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "I have tried them once or twice",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "I know about them but have not used them",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "I am not familiar with them",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Teacher familiarity with AI tools"
+        }
+      ]
+    },
+    {
+      "code": "I",
+      "title": "Career Guidance and Student Development",
+      "questions": [
+        {
+          "id": "TCH_I01",
+          "uid": "TCH_11_12.TCH_I01",
+          "variable": "school_career_guidance_availability",
+          "text": "What career guidance is available to Class 11–12 students at your school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_J07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "A structured career guidance programme",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A dedicated career counsellor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Occasional career workshops or talks",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Informal guidance from teachers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "No career guidance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Availability of school career guidance"
+        },
+        {
+          "id": "TCH_I02",
+          "uid": "TCH_11_12.TCH_I02",
+          "variable": "observed_student_career_awareness",
+          "text": "How well informed are your students about career options and pathways after Class 12?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_J04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very well informed",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Well informed",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately informed",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Poorly informed",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very poorly informed",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies widely between students",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Observed student career awareness"
+        },
+        {
+          "id": "TCH_I03",
+          "uid": "TCH_11_12.TCH_I03",
+          "variable": "career_information_sharing_frequency",
+          "text": "How often do you share career-related information with your students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_J07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Frequently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true,
+          "source_focus": "Frequency of sharing career information"
+        },
+        {
+          "id": "TCH_I04",
+          "uid": "TCH_11_12.TCH_I04",
+          "variable": "student_development_activities_available",
+          "text": "Which student development activities are available at your school? (Select all that apply.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_J07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Communication or public speaking",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Leadership or teamwork",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Critical thinking",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Digital literacy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Financial literacy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Entrepreneurship",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Personality development",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Employability or interview skills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Life skills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Sports or creative activities",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Career awareness",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "source_focus": "Student development activities available"
+        },
+        {
+          "id": "TCH_I05",
+          "uid": "TCH_11_12.TCH_I05",
+          "variable": "career_guidance_support_requirements",
+          "text": "What support would most improve career guidance for your students? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_J07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Trained career counsellors",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Career workshops",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Teacher training in career guidance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Career interest and aptitude exploration",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Information about colleges and courses",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Scholarship information",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Industry exposure or visits",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Vocational skills training",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Employability and personality development",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Digital career resources",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Career guidance support requirements"
+        }
+      ]
+    },
+    {
+      "code": "J",
+      "title": "Teacher Challenges, Support Requirements and Recommendations",
+      "questions": [
+        {
+          "id": "TCH_J01",
+          "uid": "TCH_11_12.TCH_J01",
+          "variable": "teacher_major_professional_challenges",
+          "text": "What are the major challenges you face in your work as a teacher? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_H08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Students' weak foundations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Complex concepts in the syllabus",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Mixed ability levels in the same class",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Large classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Insufficient time",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Irregular student attendance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Lack of resources",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Lack of practical facilities",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Shortage of teachers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Administrative workload",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Low student motivation",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Difficulty giving individual attention",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Major professional challenges"
+        },
+        {
+          "id": "TCH_J02",
+          "uid": "TCH_11_12.TCH_J02",
+          "variable": "teacher_professional_development_needs",
+          "text": "In which areas would professional development be most useful to you? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_H08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Teaching methods",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Remedial teaching",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Assessment",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Classroom management",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Digital teaching tools",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Using AI tools",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Motivating students",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Supporting students with learning difficulties",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Adolescent wellbeing",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Counselling skills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Inclusive education",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Subject-specific training",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Professional development needs"
+        },
+        {
+          "id": "TCH_J03",
+          "uid": "TCH_11_12.TCH_J03",
+          "variable": "recommended_student_academic_interventions",
+          "text": "Which interventions would most help your students academically? (Select up to three.)",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_K02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Foundation skills assessment",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Subject-specific assessment",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Remedial classes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Academic counselling",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Study skills and examination preparation",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Teacher training",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "More interactive or practical learning",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Digital learning",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Motivation programmes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Wellbeing support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Career guidance",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Vocational or employability training",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 13,
+              "label": "Scholarship support",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ],
+          "max_select": 3,
+          "source_focus": "Recommended student academic interventions"
+        },
+        {
+          "id": "TCH_J04",
+          "uid": "TCH_11_12.TCH_J04",
+          "variable": "teacher_willingness_to_support_initiatives",
+          "text": "Would you be willing to support initiatives to improve student learning and guidance at your school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_H08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Yes, depending on the programme and my availability",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Possibly, subject to school approval",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Unsure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "source_focus": "Willingness to support initiatives"
+        },
+        {
+          "id": "TCH_J05",
+          "uid": "TCH_11_12.TCH_J05",
+          "variable": "teacher_priority_system_improvement",
+          "text": "What is the one improvement that would most strengthen academic and career support for students at your school? (Optional)",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_H08"
+          ],
+          "max_length": 2000,
+          "source_focus": "Priority system improvement"
+        }
+      ]
+    }
+  ],
+  "change_log": [
+    {
+      "question_id": "TCH_A01",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "Source \"12 Meghalaya districts; East Khasi Hills excluding Shillong city\" enumerated as the 12 districts in the STU_11_12 order; East Khasi Hills labelled \"(outside Shillong city)\"; no \"Other\" (eligibility is controlled by the school master list)."
+    },
+    {
+      "question_id": "TCH_A04",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "Option \"Multiple\" removed: the question is multiple choice, so teaching several streams is recorded by selecting each."
+    },
+    {
+      "question_id": "TCH_A05",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "Options kept verbatim from source (already full labels)."
+    },
+    {
+      "question_id": "TCH_B03",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "\"N/A\" → \"Not applicable\"."
+    },
+    {
+      "question_id": "TCH_C07",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "Reference specified as \"students you teach in your main subject\" (resolves ISS-023). \"N/A where needed\" → \"Not applicable\"."
+    },
+    {
+      "question_id": "TCH_E01",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "\"Fortnightly\" → \"Every two weeks\" (plainer for all readers; same meaning)."
+    },
+    {
+      "question_id": "TCH_J05",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "Open text, optional."
+    },
+    {
+      "question_id": "ALL",
+      "change_type": "DRAFTING_NOTE",
+      "detail": "All other options: abbreviations expanded only; order and meaning unchanged."
+    }
+  ]
+}

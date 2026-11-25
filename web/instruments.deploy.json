@@ -1,0 +1,15 @@
+{
+  "comment": "Deployable instrument versions, copied into public/instruments at build time. Paths are relative to the repository root. Add a new version here only after it validates (tools/phase0_scripts/validate.py).",
+  "instruments": [
+    "questionnaires/student_7_10/STU_7_10_V1.1.json",
+    "questionnaires/teacher_7_10/TCH_7_10_V1.1.json",
+    "questionnaires/student_11_12/STU_11_12_V1.0.json",
+    "questionnaires/teacher_11_12/TCH_11_12_V1.1.json"
+  ],
+  "system_fill_comment": "On a school link these questions are not shown; the server fills them on submit from the school record (DEC-24). Never used in preview mode.",
+  "system_fill": {
+    "STU_11_12_V1.0": {
+      "STU_A05": "school_code"
+    }
+  }
+}

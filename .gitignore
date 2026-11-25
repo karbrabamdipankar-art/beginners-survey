@@ -1,0 +1,44 @@
+# PUBLIC REPOSITORY (owner decision 2026-11-22): code + instrument JSON only.
+# Allow-list: everything at the top level is ignored unless listed below. Excel sources,
+# the manual, decision register, research notes and data dictionary stay on the project PC.
+/*
+!/.gitignore
+!/.gitattributes
+!/.github/
+!/README.md
+!/CLAUDE.md
+!/PROJECT_STATUS.md
+!/web/
+!/apps-script/
+!/schemas/
+!/questionnaires/
+!/docs/
+
+# docs: only the format and architecture
+/docs/*
+!/docs/21_INSTRUMENT_DEFINITION_FORMAT.md
+!/docs/22_PLATFORM_ARCHITECTURE.md
+
+# questionnaires: instrument JSON only (no Excel sources, no superseded drafts)
+/questionnaires/_sources/
+/questionnaires/_superseded_drafts/
+/questionnaires/**/*.xlsx
+
+# Never commit respondent data, exports, credentials or local tooling state
+node_modules/
+dist/
+exports/
+data/
+*.env
+.env*
+.clasp.json
+.clasprc.json
+*.log
+.DS_Store
+Thumbs.db
+~$*.xlsx
+*.xlsx
+*.csv
+
+# Generated at build time from /questionnaires (web/scripts/copy-instruments.mjs)
+web/public/instruments/

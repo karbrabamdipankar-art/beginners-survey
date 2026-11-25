@@ -1,0 +1,4477 @@
+{
+  "format": "beginners.instrument/1",
+  "kind": "survey",
+  "instrument_id": "TCH_7_10",
+  "version": "1.1",
+  "instrument_version_id": "TCH_7_10_V1.1",
+  "title": "Meghalaya Educational & Counselling Research Survey — Teacher (Classes 7–10)",
+  "respondent_type": "teacher",
+  "class_range": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "language": "en",
+  "status": "APPROVED_FOR_PILOT",
+  "approval": {
+    "approved_by": "Project owner (The Beginners)",
+    "approved_on": "2026-11-22",
+    "basis": "DEC-07, DEC-10: corrections made by Claude under the project owner's delegated authority (2026-11-22)."
+  },
+  "wording_origin": "SOURCE_VERBATIM_WITH_LOGGED_CORRECTIONS",
+  "source": {
+    "file": "Meghalaya_Classes_7_10_Student_Teacher_Research_Survey.xlsx",
+    "sha256": "7f8ea2b4beee490150c2ca4d5f2b7fd98c2ac6a560aaf41c1b31c01f81ceced2"
+  },
+  "settings": {
+    "estimated_minutes": null,
+    "consent_required": true,
+    "assent_required": false,
+    "safeguarding_required": true,
+    "research_permission_gate": null,
+    "contact_request_questions": [],
+    "answer_statuses": [
+      "ANSWERED",
+      "SKIPPED",
+      "NOT_DISPLAYED",
+      "PREFER_NOT_TO_ANSWER",
+      "NOT_SURE",
+      "NOT_APPLICABLE",
+      "INCOMPLETE",
+      "INVALID"
+    ]
+  },
+  "notes": [
+    "Derived from V1.0; every change is in the change log."
+  ],
+  "sections": [
+    {
+      "code": "A",
+      "title": "Teacher Profile",
+      "questions": [
+        {
+          "id": "TCH-A01",
+          "uid": "TCH_7_10.TCH_A01",
+          "variable": "school_district",
+          "text": "Which district is your school located in?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "East Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Eastern West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "South West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Ri-Bhoi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "East Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "West Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "East Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "South West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "North Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "South Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other/Not listed",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "TCH-A02",
+          "uid": "TCH_7_10.TCH_A02",
+          "variable": "school_area_type",
+          "text": "What type of area is your school located in?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Town/city",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Semi-urban area",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Rural area",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Remote area",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very remote/isolated area",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "TCH-A03",
+          "uid": "TCH_7_10.TCH_A03",
+          "variable": "school_management",
+          "text": "What type of school do you teach in?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Government",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Government-aided",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Private",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Missionary/faith-based",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "TCH-A04",
+          "uid": "TCH_7_10.TCH_A04",
+          "variable": "classes_taught",
+          "text": "Which classes do you currently teach?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Class 7",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Class 8",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Class 9",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Class 10",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "TCH-A05",
+          "uid": "TCH_7_10.TCH_A05",
+          "variable": "teaching_experience",
+          "text": "How many years have you been teaching?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Less than 1 year",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "1–3 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "4–7 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "8–15 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "More than 15 years",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "TCH-A06",
+          "uid": "TCH_7_10.TCH_A06",
+          "variable": "subjects_taught",
+          "text": "Which subjects do you primarily teach?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mathematics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Social Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Computer/ICT",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Languages",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Arts/Music",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Physical Education/Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "title": "Student Learning Patterns",
+      "questions": [
+        {
+          "id": "TCH-B01",
+          "uid": "TCH_7_10.TCH_B01",
+          "variable": "common_difficulty_areas",
+          "text": "Which academic areas are the most common sources of difficulty for students in Classes 7–10?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Reading comprehension",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Writing",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "English language comprehension",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Basic arithmetic",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Fractions and decimals",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Algebraic reasoning",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Geometry",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Science concepts",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Applying knowledge to questions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Remembering information",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "TCH-B02",
+          "uid": "TCH_7_10.TCH_B02",
+          "variable": "common_difficult_subjects",
+          "text": "Which subjects do students most commonly struggle with?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mathematics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Social Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Computer/ICT",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Languages",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Arts/Music",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Physical Education/Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It varies considerably",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "TCH-B03",
+          "uid": "TCH_7_10.TCH_B03",
+          "variable": "foundation_gaps_class7_prevalence",
+          "text": "How common are significant foundational learning gaps among students entering Class 7?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B04",
+          "uid": "TCH_7_10.TCH_B04",
+          "variable": "foundation_gaps_class9_10_prevalence",
+          "text": "How common are significant foundational learning gaps among students in Classes 9–10?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B05",
+          "uid": "TCH_7_10.TCH_B05",
+          "variable": "application_gap_freq",
+          "text": "How often do students appear to understand a lesson but struggle to apply the knowledge to questions or problems?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B06",
+          "uid": "TCH_7_10.TCH_B06",
+          "variable": "english_exam_question_difficulty_freq",
+          "text": "How often do students struggle to understand examination questions written in English?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B07",
+          "uid": "TCH_7_10.TCH_B07",
+          "variable": "question_avoidance_freq",
+          "text": "How often do students avoid asking questions because they are afraid of being wrong or embarrassed?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B08",
+          "uid": "TCH_7_10.TCH_B08",
+          "variable": "give_up_quickly_freq",
+          "text": "How often do students give up quickly when they encounter difficult academic work?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-B09",
+          "uid": "TCH_7_10.TCH_B09",
+          "variable": "multistep_instruction_difficulty_freq",
+          "text": "How often do students have difficulty completing multi-step tasks or following several instructions?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "title": "Attendance & Access",
+      "questions": [
+        {
+          "id": "TCH-C01",
+          "uid": "TCH_7_10.TCH_C01",
+          "variable": "irregular_attendance_prevalence",
+          "text": "How common is irregular attendance among students in Classes 7–10?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_C01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C02",
+          "uid": "TCH_7_10.TCH_C02",
+          "variable": "common_absence_reasons",
+          "text": "What are the most common reasons students miss school?",
+          "type": "multi",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Illness or health",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Bad weather",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Road or transport problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Household work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Looking after siblings or family members",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Farming, business or other work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Financial difficulties",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Difficulty with studies",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Bullying or safety concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Family reasons",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "TCH-C03",
+          "uid": "TCH_7_10.TCH_C03",
+          "variable": "weather_attendance_impact_freq",
+          "text": "How often do weather conditions significantly affect students' ability to attend school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C04",
+          "uid": "TCH_7_10.TCH_C04",
+          "variable": "transport_attendance_impact_freq",
+          "text": "How often do road or transport problems significantly affect students' ability to attend school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C05",
+          "uid": "TCH_7_10.TCH_C05",
+          "variable": "household_study_impact_freq",
+          "text": "How often do household responsibilities reduce the time students have for studying?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C06",
+          "uid": "TCH_7_10.TCH_C06",
+          "variable": "caregiving_study_impact_freq",
+          "text": "How often do caregiving responsibilities affect students' education or study time?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C07",
+          "uid": "TCH_7_10.TCH_C07",
+          "variable": "work_study_impact_freq",
+          "text": "How often does paid or unpaid work affect students' education or study time?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-C08",
+          "uid": "TCH_7_10.TCH_C08",
+          "variable": "residence_change_disruption_freq",
+          "text": "How often do changes in family residence or work disrupt students' education?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "D",
+      "title": "Study Behaviour",
+      "questions": [
+        {
+          "id": "TCH-D01",
+          "uid": "TCH_7_10.TCH_D01",
+          "variable": "no_study_routine_prevalence",
+          "text": "How common is the absence of a regular study routine among students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-D02",
+          "uid": "TCH_7_10.TCH_D02",
+          "variable": "incomplete_homework_prevalence",
+          "text": "How common is incomplete homework among students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-D03",
+          "uid": "TCH_7_10.TCH_D03",
+          "variable": "last_minute_prep_prevalence",
+          "text": "How common is last-minute examination preparation among students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-D04",
+          "uid": "TCH_7_10.TCH_D04",
+          "variable": "revision_difficulty_prevalence",
+          "text": "How common is difficulty with revision and remembering previously learned material?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-D05",
+          "uid": "TCH_7_10.TCH_D05",
+          "variable": "phone_interference_prevalence",
+          "text": "How common is excessive phone or social-media use interfering with students' study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-D06",
+          "uid": "TCH_7_10.TCH_D06",
+          "variable": "help_seeking_freq",
+          "text": "How often do students seek help when they do not understand something?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "E",
+      "title": "Motivation & Self-Belief",
+      "questions": [
+        {
+          "id": "TCH-E01",
+          "uid": "TCH_7_10.TCH_E01",
+          "variable": "general_motivation_level",
+          "text": "How motivated are students in general to learn and improve academically?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Low",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "High",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very high",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "Varies greatly",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-E02",
+          "uid": "TCH_7_10.TCH_E02",
+          "variable": "low_confidence_prevalence",
+          "text": "How common is low academic confidence among students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-E03",
+          "uid": "TCH_7_10.TCH_E03",
+          "variable": "fixed_ability_belief_prevalence",
+          "text": "How common is the belief among students that they are 'not good' at a particular subject and cannot improve?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-E04",
+          "uid": "TCH_7_10.TCH_E04",
+          "variable": "continue_after_mistakes_freq",
+          "text": "How often do students continue working after making mistakes or receiving poor marks?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-E05",
+          "uid": "TCH_7_10.TCH_E05",
+          "variable": "low_motivation_causes",
+          "text": "What do you believe are the most common causes of low academic motivation?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Lack of understanding",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Repeated failure",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Low confidence",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Family problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Financial difficulties",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Poor study habits",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Lack of career goals",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Peer influence",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Digital distractions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Health or emotional concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "F",
+      "title": "Study Focus & Task Management",
+      "questions": [
+        {
+          "id": "TCH-F01",
+          "uid": "TCH_7_10.TCH_F01",
+          "variable": "attention_difficulty_prevalence",
+          "text": "How common is difficulty maintaining attention during lessons?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-F02",
+          "uid": "TCH_7_10.TCH_F02",
+          "variable": "multistep_task_difficulty_prevalence",
+          "text": "How common is difficulty completing tasks that require several steps?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-F03",
+          "uid": "TCH_7_10.TCH_F03",
+          "variable": "instructions_repeat_freq",
+          "text": "How often do students need instructions repeated before beginning an activity?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-F04",
+          "uid": "TCH_7_10.TCH_F04",
+          "variable": "concentration_interference_factors",
+          "text": "What factors most commonly interfere with students' concentration?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Phone or social media",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Lack of sleep",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Hunger or health problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Family concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Stress or worry",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Difficulty understanding the lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Classroom environment",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Noise",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Lack of interest",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "G",
+      "title": "Emotional Wellbeing & Safety",
+      "questions": [
+        {
+          "id": "TCH-G01",
+          "uid": "TCH_7_10.TCH_G01",
+          "variable": "exam_nervousness_prevalence",
+          "text": "How common is significant examination-related nervousness among students?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-G02",
+          "uid": "TCH_7_10.TCH_G02",
+          "variable": "visible_distress_prevalence",
+          "text": "How common is visible worry or emotional distress affecting students' school participation?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F09"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-G03",
+          "uid": "TCH_7_10.TCH_G03",
+          "variable": "bullying_prevalence",
+          "text": "How common is bullying, teasing or repeated unwanted behaviour among students?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-G04",
+          "uid": "TCH_7_10.TCH_G04",
+          "variable": "confidence_students_know_whom",
+          "text": "How confident are you that students know whom to approach when they have a serious personal or safety concern?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_F05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not at all confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Slightly confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Extremely confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-G05",
+          "uid": "TCH_7_10.TCH_G05",
+          "variable": "confidence_safeguarding_process",
+          "text": "How confident are you that your school has a clear process for responding when a student may be unsafe or in serious distress?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_F05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not at all confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Slightly confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Extremely confident",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-G06",
+          "uid": "TCH_7_10.TCH_G06",
+          "variable": "common_emotional_social_concerns",
+          "text": "What are the most common emotional or social concerns affecting students?",
+          "type": "multi",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F09"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Exam stress",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Low confidence",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Family problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Peer conflict",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Bullying",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Loneliness",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Financial stress",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Health concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Uncertainty about the future",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        }
+      ],
+      "notice": "You can choose not to answer any question in this section.",
+      "notice_origin": "PLATFORM"
+    },
+    {
+      "code": "H",
+      "title": "Family & Home Environment",
+      "questions": [
+        {
+          "id": "TCH-H01",
+          "uid": "TCH_7_10.TCH_H01",
+          "variable": "limited_family_support_prevalence",
+          "text": "How common is limited parental or family support for students' education?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H02",
+          "uid": "TCH_7_10.TCH_H02",
+          "variable": "no_quiet_place_prevalence",
+          "text": "How common is the lack of a quiet place for students to study at home?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H03",
+          "uid": "TCH_7_10.TCH_H03",
+          "variable": "no_materials_prevalence",
+          "text": "How common is the lack of books or basic study materials at home?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H04",
+          "uid": "TCH_7_10.TCH_H04",
+          "variable": "household_responsibility_prevalence",
+          "text": "How common are household responsibilities that significantly reduce students' study time?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H05",
+          "uid": "TCH_7_10.TCH_H05",
+          "variable": "caregiving_prevalence",
+          "text": "How common are caregiving responsibilities that significantly reduce students' study time?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H06",
+          "uid": "TCH_7_10.TCH_H06",
+          "variable": "financial_difficulty_prevalence",
+          "text": "How common are financial difficulties that affect students' education?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-H07",
+          "uid": "TCH_7_10.TCH_H07",
+          "variable": "family_expectation_influence",
+          "text": "How much do family expectations influence students' academic choices and future plans?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not at all",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very strongly",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "I",
+      "title": "School Climate & Support",
+      "questions": [
+        {
+          "id": "TCH-I01",
+          "uid": "TCH_7_10.TCH_I01",
+          "variable": "student_help_comfort",
+          "text": "How comfortable are students generally asking teachers for help?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_H01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncomfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncomfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Neither",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Comfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very comfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-I02",
+          "uid": "TCH_7_10.TCH_I02",
+          "variable": "low_participation_fear_prevalence",
+          "text": "How common is low participation in class because students are afraid of being wrong or embarrassed?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-I03",
+          "uid": "TCH_7_10.TCH_I03",
+          "variable": "social_isolation_prevalence",
+          "text": "How common is social isolation or feeling left out among students?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-I04",
+          "uid": "TCH_7_10.TCH_I04",
+          "variable": "class_not_held_no_teacher_freq",
+          "text": "How often does a scheduled class not take place because no teacher is available to teach it?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-I05",
+          "uid": "TCH_7_10.TCH_I05",
+          "variable": "counselling_access_adequacy",
+          "text": "How adequate is access to school-based counselling or student support?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_H07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not available",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Very inadequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Inadequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Adequate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Very good",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "J",
+      "title": "Digital Access",
+      "questions": [
+        {
+          "id": "TCH-J01",
+          "uid": "TCH_7_10.TCH_J01",
+          "variable": "device_lack_prevalence",
+          "text": "How common is lack of regular access to a smartphone or computer for learning?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-J02",
+          "uid": "TCH_7_10.TCH_J02",
+          "variable": "unreliable_internet_prevalence",
+          "text": "How common is unreliable internet access affecting students' learning?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-J03",
+          "uid": "TCH_7_10.TCH_J03",
+          "variable": "data_cost_barrier_prevalence",
+          "text": "How common is the cost of mobile data a barrier to digital learning?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-J04",
+          "uid": "TCH_7_10.TCH_J04",
+          "variable": "online_resource_difficulty_prevalence",
+          "text": "How common is difficulty finding or evaluating useful online learning resources?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_I05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "K",
+      "title": "Career Awareness",
+      "questions": [
+        {
+          "id": "TCH-K01",
+          "uid": "TCH_7_10.TCH_K01",
+          "variable": "student_career_clarity",
+          "text": "How clear are students generally about what they may want to do after Class 10?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_J01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not at all clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Slightly clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Extremely clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "Varies greatly",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-K02",
+          "uid": "TCH_7_10.TCH_K02",
+          "variable": "student_career_knowledge",
+          "text": "How much do students generally know about different careers and the education needed to enter them?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_J04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost nothing",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Very little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Some",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Quite a lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "Varies greatly",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-K03",
+          "uid": "TCH_7_10.TCH_K03",
+          "variable": "family_career_pressure_prevalence",
+          "text": "How common is family pressure influencing students' educational or career choices?",
+          "type": "single",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-K04",
+          "uid": "TCH_7_10.TCH_K04",
+          "variable": "career_guidance_lack_prevalence",
+          "text": "How common is lack of access to career guidance among students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_J07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Uncommon",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very common",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "TCH-K05",
+          "uid": "TCH_7_10.TCH_K05",
+          "variable": "student_career_interest_areas",
+          "text": "Which career areas appear to attract the greatest interest among students?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_J02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Computers/technology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Healthcare",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Government/public service",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Business",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Teaching",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Engineering",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Creative work/media",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Agriculture/nature/animals",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Skilled trades",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Law/social issues",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "Students show widely varied interests",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "L",
+      "title": "Teacher Voice",
+      "questions": [
+        {
+          "id": "TCH-L01",
+          "uid": "TCH_7_10.TCH_L01",
+          "variable": "biggest_barrier_text",
+          "text": "What do you believe is the single biggest barrier preventing students from learning effectively?",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "TCH-L02",
+          "uid": "TCH_7_10.TCH_L02",
+          "variable": "common_learning_gap_text",
+          "text": "What is the most common academic learning gap you observe among students in Classes 7–10?",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "TCH-L03",
+          "uid": "TCH_7_10.TCH_L03",
+          "variable": "improvement_change_text",
+          "text": "What is one change that would most improve students' learning in your school or community?",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "TCH-L04",
+          "uid": "TCH_7_10.TCH_L04",
+          "variable": "uncovered_problem_text",
+          "text": "What important problem affecting students is not adequately covered in this survey?",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        }
+      ]
+    }
+  ],
+  "change_log": [
+    {
+      "question_id": "TCH-A01",
+      "change_type": "OPTION_ADDED",
+      "detail": "Added \"Eastern West Khasi Hills\" (code 12) after West Khasi Hills — district created 2021; was missing (ISS-016)."
+    },
+    {
+      "question_id": "TCH-A01",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as school_district_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-A03",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as school_management_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-A04",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as classes_taught_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-A06",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as subjects_taught_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-B01",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as common_difficulty_areas_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-B02",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as common_difficult_subjects_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-C02",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type multi — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-C02",
+      "change_type": "LOGIC_ADDED",
+      "detail": "Exclusive option(s): Not sure (ISS-020)."
+    },
+    {
+      "question_id": "TCH-C02",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as common_absence_reasons_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-C05",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-C06",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-C07",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-C08",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-E05",
+      "change_type": "LOGIC_ADDED",
+      "detail": "Exclusive option(s): Not sure (ISS-020)."
+    },
+    {
+      "question_id": "TCH-E05",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as low_motivation_causes_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-F04",
+      "change_type": "LOGIC_ADDED",
+      "detail": "Exclusive option(s): Not sure (ISS-020)."
+    },
+    {
+      "question_id": "TCH-F04",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as concentration_interference_factors_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-G01",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G02",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G03",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity HIGHLY_SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G04",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G05",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G06",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type multi — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-G06",
+      "change_type": "LOGIC_ADDED",
+      "detail": "Exclusive option(s): Not sure (ISS-020)."
+    },
+    {
+      "question_id": "TCH-G06",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as common_emotional_social_concerns_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-H01",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-H04",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-H05",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-H06",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-H07",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-I03",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-K03",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type single — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-K05",
+      "change_type": "LOGIC_ADDED",
+      "detail": "Exclusive option(s): Not sure (ISS-020)."
+    },
+    {
+      "question_id": "TCH-K05",
+      "change_type": "LOGIC_ADDED",
+      "detail": "\"Other\" opens a specify text box stored as student_career_interest_areas_other_text (ISS-019)."
+    },
+    {
+      "question_id": "TCH-L01",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type text — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-L02",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type text — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-L03",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type text — respondent may skip (ISS-030/031)."
+    },
+    {
+      "question_id": "TCH-L04",
+      "change_type": "REQUIRED_TO_OPTIONAL",
+      "detail": "Sensitivity SENSITIVE / type text — respondent may skip (ISS-030/031)."
+    }
+  ]
+}

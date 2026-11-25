@@ -1,0 +1,4513 @@
+{
+  "format": "beginners.instrument/1",
+  "kind": "survey",
+  "instrument_id": "STU_7_10",
+  "version": "1.0",
+  "instrument_version_id": "STU_7_10_V1.0",
+  "title": "Meghalaya Educational & Counselling Research Survey — Student (Classes 7–10)",
+  "respondent_type": "student",
+  "class_range": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "language": "en",
+  "status": "APPROVED_BASELINE_ARCHIVE",
+  "approval": {
+    "approved_by": "Project owner (The Beginners)",
+    "approved_on": "2026-11-22",
+    "basis": "DEC-01: approved by project owner 2026-11-22. Verbatim baseline; superseded for deployment by V1.1."
+  },
+  "wording_origin": "SOURCE_VERBATIM",
+  "source": {
+    "file": "Meghalaya_Classes_7_10_Student_Teacher_Research_Survey.xlsx",
+    "sha256": "7f8ea2b4beee490150c2ca4d5f2b7fd98c2ac6a560aaf41c1b31c01f81ceced2"
+  },
+  "settings": {
+    "estimated_minutes": null,
+    "consent_required": true,
+    "assent_required": true,
+    "safeguarding_required": true,
+    "research_permission_gate": null,
+    "contact_request_questions": [],
+    "answer_statuses": [
+      "ANSWERED",
+      "SKIPPED",
+      "NOT_DISPLAYED",
+      "PREFER_NOT_TO_ANSWER",
+      "NOT_SURE",
+      "NOT_APPLICABLE",
+      "INCOMPLETE",
+      "INVALID"
+    ]
+  },
+  "notes": [
+    "Verbatim from source. Required flags exactly as source. Not for deployment — see V1.1."
+  ],
+  "sections": [
+    {
+      "code": "A",
+      "title": "Student Profile",
+      "questions": [
+        {
+          "id": "STU-A01",
+          "uid": "STU_7_10.STU_A01",
+          "variable": "current_class",
+          "text": "What is your current class?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Class 7",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Class 8",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Class 9",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Class 10",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-A02",
+          "uid": "STU_7_10.STU_A02",
+          "variable": "age_band",
+          "text": "How old are you?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "11",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "12",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "13",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "14",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "15",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "16",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "17",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "18 or above",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-A03",
+          "uid": "STU_7_10.STU_A03",
+          "variable": "gender",
+          "text": "What is your gender?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Girl",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Boy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Another identity",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-A04",
+          "uid": "STU_7_10.STU_A04",
+          "variable": "school_district",
+          "text": "Which district is your school located in?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "East Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "South West Khasi Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Ri-Bhoi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "East Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "West Jaintia Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "East Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "South West Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "North Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "South Garo Hills",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other/Not listed",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-A05",
+          "uid": "STU_7_10.STU_A05",
+          "variable": "home_area_type",
+          "text": "What type of area do you live in?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_A02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Town/city",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Village close to a town",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Rural village",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Remote village",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very remote/isolated area",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-A06",
+          "uid": "STU_7_10.STU_A06",
+          "variable": "home_languages",
+          "text": "What language or languages do you usually speak at home?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Khasi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Garo",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Pnar/Jaintia",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Bengali",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Hindi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Nepali",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Another local language",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 196,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-A07",
+          "uid": "STU_7_10.STU_A07",
+          "variable": "best_understood_language",
+          "text": "Which language do you understand best when difficult ideas are explained?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Khasi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Garo",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Pnar/Jaintia",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Bengali",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Hindi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Another language",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-A08",
+          "uid": "STU_7_10.STU_A08",
+          "variable": "instruction_language",
+          "text": "What language is used most often for teaching the subjects you study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "PERSONAL",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Khasi",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Garo",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Pnar/Jaintia",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Mixed languages",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-A09",
+          "uid": "STU_7_10.STU_A09",
+          "variable": "commute_time",
+          "text": "How long does it usually take you to travel from home to school one way?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Less than 15 minutes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "15–30 minutes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "31–60 minutes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "1–2 hours",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "More than 2 hours",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "B",
+      "title": "Attendance & Access",
+      "questions": [
+        {
+          "id": "STU-B01",
+          "uid": "STU_7_10.STU_B01",
+          "variable": "days_missed_30d",
+          "text": "During the last 30 days, approximately how many school days did you miss?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_C01"
+          ],
+          "options": [
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "1–2 days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "3–5 days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "6–10 days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "More than 10 days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-B02",
+          "uid": "STU_7_10.STU_B02",
+          "variable": "absence_reasons",
+          "text": "What are the main reasons you sometimes miss school?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Illness or health",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Bad weather",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Road or transport problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Household work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Looking after siblings or family members",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Helping with farming, business or other work",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Financial difficulties",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Difficulty with studies",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Bullying or safety concerns",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Family reasons",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 0,
+              "label": "I rarely miss school",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-B03",
+          "uid": "STU_7_10.STU_B03",
+          "variable": "weather_access_difficulty",
+          "text": "How often do bad weather make it difficult for you to reach school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-B04",
+          "uid": "STU_7_10.STU_B04",
+          "variable": "transport_access_difficulty",
+          "text": "How often do road or transport problems make it difficult for you to reach school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-B05",
+          "uid": "STU_7_10.STU_B05",
+          "variable": "household_work_study_impact",
+          "text": "How often do you have household work that reduces the time you have for studying?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-B06",
+          "uid": "STU_7_10.STU_B06",
+          "variable": "caregiving_study_impact",
+          "text": "How often do you have to look after younger children or other family members when you would otherwise study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-B07",
+          "uid": "STU_7_10.STU_B07",
+          "variable": "work_study_impact",
+          "text": "How often do you do paid or unpaid work that affects your education or study time?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-B08",
+          "uid": "STU_7_10.STU_B08",
+          "variable": "family_move_disruption",
+          "text": "During the past year, have changes in where your family lives or works made it difficult for you to continue your studies?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_A05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Yes, once",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Yes, more than once",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "title": "Academic Experience",
+      "questions": [
+        {
+          "id": "STU-C01",
+          "uid": "STU_7_10.STU_C01",
+          "variable": "enjoyed_subjects",
+          "text": "Which subjects do you enjoy most?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_B02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mathematics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Social Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Computer/ICT",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Languages",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Arts/Music",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Physical Education/Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-C02",
+          "uid": "STU_7_10.STU_C02",
+          "variable": "difficult_subjects",
+          "text": "Which subjects do you find most difficult?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Mathematics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Social Science",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Computer/ICT",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Languages",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Arts/Music",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Physical Education/Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-C03",
+          "uid": "STU_7_10.STU_C03",
+          "variable": "self_rated_exam_performance",
+          "text": "How would you describe your overall academic performance in your most recent examination?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_B01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Among the highest in my class",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Above average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "About average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Below average",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Among the lowest in my class",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I do not know",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-C04",
+          "uid": "STU_7_10.STU_C04",
+          "variable": "help_seeking_first_action",
+          "text": "When you do not understand a lesson, what do you usually do first?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Ask the teacher",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Ask a friend or classmate",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Ask someone at home",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Search online or watch a video",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Try to understand it alone",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Leave it and move on",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "I usually do not know what to do",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-C05",
+          "uid": "STU_7_10.STU_C05",
+          "variable": "lesson_understanding_freq",
+          "text": "How often do you understand what your teacher is explaining in class?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-C06",
+          "uid": "STU_7_10.STU_C06",
+          "variable": "text_question_understanding_freq",
+          "text": "How often do you understand the questions in your textbooks and examinations?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-C07",
+          "uid": "STU_7_10.STU_C07",
+          "variable": "english_question_difficulty_freq",
+          "text": "When a question is written in English, how often does the language make it difficult to understand what is being asked?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-C08",
+          "uid": "STU_7_10.STU_C08",
+          "variable": "greatest_study_difficulty",
+          "text": "Which of these causes you the greatest difficulty in studies?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_B03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Understanding the lesson",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Remembering what I studied",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Applying what I learned to questions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Reading and understanding English",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Writing answers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Solving Mathematics problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Concentrating",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Finding time to study",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Feeling nervous or worried",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Lack of help or resources",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "I do not face major difficulty",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-C09",
+          "uid": "STU_7_10.STU_C09",
+          "variable": "class_not_held_no_teacher_freq",
+          "text": "How often does a scheduled class not take place because no teacher is available to teach it?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "D",
+      "title": "Study Behaviour",
+      "questions": [
+        {
+          "id": "STU-D01",
+          "uid": "STU_7_10.STU_D01",
+          "variable": "daily_study_time",
+          "text": "On a normal school day, how much time do you spend studying outside school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_D01"
+          ],
+          "options": [
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Less than 30 minutes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "30–60 minutes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "1–2 hours",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "2–3 hours",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "More than 3 hours",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-D02",
+          "uid": "STU_7_10.STU_D02",
+          "variable": "regular_study_time",
+          "text": "Do you usually have a regular time for studying?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes, almost every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Usually",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-D03",
+          "uid": "STU_7_10.STU_D03",
+          "variable": "study_distraction_freq",
+          "text": "When you study, how often do you use your phone or other distractions at the same time?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-D04",
+          "uid": "STU_7_10.STU_D04",
+          "variable": "homework_on_time_freq",
+          "text": "How often do you complete your homework on time?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_D02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-D05",
+          "uid": "STU_7_10.STU_D05",
+          "variable": "exam_prep_start_approach",
+          "text": "When you have a large examination to prepare for, how do you usually begin?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Make a plan and follow it",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Start with the easiest topics",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Study whatever I feel like",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Wait until the examination is close",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Ask someone to tell me what to study",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "I often do not know where to begin",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-D06",
+          "uid": "STU_7_10.STU_D06",
+          "variable": "revision_freq",
+          "text": "How often do you revise something after learning it for the first time?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_D04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-D07",
+          "uid": "STU_7_10.STU_D07",
+          "variable": "mistake_thinking",
+          "text": "When you make a mistake in a difficult subject, what do you usually think?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "I can learn from it",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "I need more practice",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "I probably cannot do this subject",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "I feel embarrassed and avoid trying again",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "I do not think much about it",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It depends on the situation",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "E",
+      "title": "Motivation & Self-Belief",
+      "questions": [
+        {
+          "id": "STU-E01",
+          "uid": "STU_7_10.STU_E01",
+          "variable": "learning_interest",
+          "text": "How interested are you in learning new things?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very interested",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Quite interested",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat interested",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Not very interested",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Not interested",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E02",
+          "uid": "STU_7_10.STU_E02",
+          "variable": "belief_can_improve",
+          "text": "I believe I can improve in a subject even if I am currently weak in it.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E03",
+          "uid": "STU_7_10.STU_E03",
+          "variable": "confidence_learn_difficult",
+          "text": "I feel confident that I can learn difficult topics if I get enough practice.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E04",
+          "uid": "STU_7_10.STU_E04",
+          "variable": "persist_when_difficult",
+          "text": "I continue trying when schoolwork becomes difficult.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E05",
+          "uid": "STU_7_10.STU_E05",
+          "variable": "worth_continuing",
+          "text": "Even when studying is difficult, I feel that it is worth continuing.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E06",
+          "uid": "STU_7_10.STU_E06",
+          "variable": "pride_understanding",
+          "text": "I feel proud when I understand something that was previously difficult.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-E07",
+          "uid": "STU_7_10.STU_E07",
+          "variable": "know_how_to_improve",
+          "text": "I know what I need to do when I want to improve my marks.",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "PROVISIONAL_SCALE_ITEM",
+          "constructs": [
+            "CON_E05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Strongly disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Disagree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "Not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Strongly agree",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        }
+      ]
+    },
+    {
+      "code": "F",
+      "title": "Study Focus & Task Management",
+      "questions": [
+        {
+          "id": "STU-F01",
+          "uid": "STU_7_10.STU_F01",
+          "variable": "study_focus_loss_freq",
+          "text": "How often do you lose focus while studying?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-F02",
+          "uid": "STU_7_10.STU_F02",
+          "variable": "lesson_focus_loss_freq",
+          "text": "How often do you lose focus during a lesson even when you are trying to listen?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-F03",
+          "uid": "STU_7_10.STU_F03",
+          "variable": "instructions_repeat_need_freq",
+          "text": "When a teacher gives several instructions for an activity, how often do you need the instructions repeated?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-F04",
+          "uid": "STU_7_10.STU_F04",
+          "variable": "tasks_unfinished_freq",
+          "text": "How often do you start several tasks but leave some unfinished?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_D07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-F05",
+          "uid": "STU_7_10.STU_F05",
+          "variable": "helpful_learning_methods",
+          "text": "Which learning methods help you most?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_D08"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Reading silently",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Writing notes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Listening to explanations",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Watching videos",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Practising questions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Discussing with others",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Doing practical activities",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "G",
+      "title": "Emotional Wellbeing",
+      "questions": [
+        {
+          "id": "STU-G01",
+          "uid": "STU_7_10.STU_G01",
+          "variable": "school_worry_2wk",
+          "text": "During the past two weeks, how often have you felt worried about school or studies?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A few days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "More than half the days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Nearly every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to answer",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-G02",
+          "uid": "STU_7_10.STU_G02",
+          "variable": "low_mood_2wk",
+          "text": "During the past two weeks, how often have you felt sad, down or unhappy?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_F02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A few days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "More than half the days",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Nearly every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to answer",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-G03",
+          "uid": "STU_7_10.STU_G03",
+          "variable": "exam_nervousness",
+          "text": "Before or during examinations, how nervous do you usually feel?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not nervous",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A little nervous",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Moderately nervous",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very nervous",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Extremely nervous",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-G04",
+          "uid": "STU_7_10.STU_G04",
+          "variable": "reaction_low_marks",
+          "text": "When you receive marks lower than expected, what usually happens to you?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_E06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "I use it to improve",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "I feel disappointed but continue",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "I lose confidence for a while",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "I feel very upset and avoid studying",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "I do not care much",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 95,
+              "label": "It depends",
+              "role": "VARIES_DEPENDS",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-G05",
+          "uid": "STU_7_10.STU_G05",
+          "variable": "current_concentration_stressor",
+          "text": "Is there something currently making it difficult for you to concentrate on school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_F04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Yes, studies",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Yes, family situation",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Yes, health",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Yes, friendships or relationships",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Yes, money or resources",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Yes, something else",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-G06",
+          "uid": "STU_7_10.STU_G06",
+          "variable": "safe_person_to_talk",
+          "text": "When you feel worried or upset, is there someone you can safely talk to?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_F05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes, definitely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Usually",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        }
+      ],
+      "notice": "You can choose not to answer any question in this section.",
+      "notice_origin": "PLATFORM"
+    },
+    {
+      "code": "H",
+      "title": "Family & Home Environment",
+      "questions": [
+        {
+          "id": "STU-H01",
+          "uid": "STU_7_10.STU_H01",
+          "variable": "family_education_encouragement",
+          "text": "At home, how much encouragement do you receive to continue your education?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Quite a lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Some",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 99,
+              "label": "Not applicable",
+              "role": "NOT_APPLICABLE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H02",
+          "uid": "STU_7_10.STU_H02",
+          "variable": "family_schoolwork_discussion",
+          "text": "How often does your family ask about or discuss your schoolwork?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H03",
+          "uid": "STU_7_10.STU_H03",
+          "variable": "quiet_study_place",
+          "text": "Do you have a reasonably quiet place where you can study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Usually",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H04",
+          "uid": "STU_7_10.STU_H04",
+          "variable": "study_materials_available",
+          "text": "Do you have the books and basic study materials you need?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Usually",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H05",
+          "uid": "STU_7_10.STU_H05",
+          "variable": "household_work_responsibility",
+          "text": "How much responsibility do you have for household work?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Some",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very high",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H06",
+          "uid": "STU_7_10.STU_H06",
+          "variable": "caregiving_responsibility",
+          "text": "How much responsibility do you have for looking after younger children or other family members?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_C04"
+          ],
+          "options": [
+            {
+              "code": 0,
+              "label": "None",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Some",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very high",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H07",
+          "uid": "STU_7_10.STU_H07",
+          "variable": "family_future_influence",
+          "text": "How much do your family members influence what you should study or become in the future?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Not at all",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "A little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Somewhat",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost completely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-H08",
+          "uid": "STU_7_10.STU_H08",
+          "variable": "helping_adult_education",
+          "text": "What is the highest level of education completed by the adult who helps you most with your studies?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_G05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Did not attend school",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Primary school",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Middle school",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Class 10",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Class 12",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "College/university",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I do not know",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "No adult regularly helps me",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "I",
+      "title": "School Climate & Relationships",
+      "questions": [
+        {
+          "id": "STU-I01",
+          "uid": "STU_7_10.STU_I01",
+          "variable": "school_safety_feeling",
+          "text": "How safe do you generally feel at school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very safe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Safe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes unsafe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often unsafe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very unsafe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-I02",
+          "uid": "STU_7_10.STU_I02",
+          "variable": "teacher_help_comfort",
+          "text": "How comfortable are you asking a teacher for help when you do not understand something?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_H01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Very comfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Comfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Neither comfortable nor uncomfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Uncomfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very uncomfortable",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-I03",
+          "uid": "STU_7_10.STU_I03",
+          "variable": "teacher_belief_in_success",
+          "text": "How often do you feel that your teachers believe you can succeed?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_H01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-I04",
+          "uid": "STU_7_10.STU_I04",
+          "variable": "left_out_freq",
+          "text": "How often do you feel left out or alone at school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F07"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost always",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-I05",
+          "uid": "STU_7_10.STU_I05",
+          "variable": "peer_bullying_experience",
+          "text": "Have you experienced teasing, bullying, threats or repeated unwanted behaviour from other students?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "HIGHLY_SENSITIVE",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_F06"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Very often",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 98,
+              "label": "Prefer not to say",
+              "role": "PREFER_NOT_TO_ANSWER",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-I06",
+          "uid": "STU_7_10.STU_I06",
+          "variable": "knows_whom_to_approach",
+          "text": "If you have a serious problem at school, do you know whom you can approach for help?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_F05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Maybe",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        }
+      ],
+      "notice": "You can choose not to answer any question in this section.",
+      "notice_origin": "PLATFORM"
+    },
+    {
+      "code": "J",
+      "title": "Digital Access",
+      "questions": [
+        {
+          "id": "STU-J01",
+          "uid": "STU_7_10.STU_J01",
+          "variable": "smartphone_access",
+          "text": "Do you have regular access to a smartphone for educational purposes?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes, my own device",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Yes, shared with family",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Sometimes access",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "No",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-J02",
+          "uid": "STU_7_10.STU_J02",
+          "variable": "internet_reliability",
+          "text": "How reliable is your internet access at home or where you usually study?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Reliable most of the time",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Usually available but sometimes weak",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Available only sometimes",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very poor",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "No internet access",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-J03",
+          "uid": "STU_7_10.STU_J03",
+          "variable": "internet_learning_freq",
+          "text": "How often do you use the internet for learning?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_I03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Every day",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Several times a week",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "About once a week",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Rarely",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Never",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-J04",
+          "uid": "STU_7_10.STU_J04",
+          "variable": "digital_learning_barriers",
+          "text": "What makes it difficult for you to use digital learning resources?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "CONTEXTUAL",
+          "constructs": [
+            "CON_I04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "No device",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Device is shared",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Poor internet",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Cost of data",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Electricity problems",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Do not know how to find useful resources",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Family restrictions",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "No difficulty",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "K",
+      "title": "Career Awareness",
+      "questions": [
+        {
+          "id": "STU-K01",
+          "uid": "STU_7_10.STU_K01",
+          "variable": "post_school_idea_clarity",
+          "text": "Do you already have an idea of what you may want to do after school?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_J01"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Yes, I am very clear",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "I have a few ideas",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "I have one or two vague ideas",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "No, not yet",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "I have not thought about it",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-K02",
+          "uid": "STU_7_10.STU_K02",
+          "variable": "activity_interests",
+          "text": "What kinds of activities interest you most?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_J02"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Working with computers/technology",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Helping people",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Science and experiments",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Business and selling",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Working with numbers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Creative work/design/media",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Teaching",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Healthcare",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 9,
+              "label": "Government/public service",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 10,
+              "label": "Working with machines/tools",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 11,
+              "label": "Nature/agriculture/animals",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 12,
+              "label": "Sports",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 13,
+              "label": "Law/social issues",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 96,
+              "label": "Other",
+              "role": "OTHER",
+              "exclusive": false,
+              "specify": true
+            }
+          ]
+        },
+        {
+          "id": "STU-K03",
+          "uid": "STU_7_10.STU_K03",
+          "variable": "career_priority_factor",
+          "text": "Which factor is most important to you when thinking about a future career?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_J03"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "Doing something I enjoy",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Earning a good income",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Job security",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Helping people",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Being respected",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "Working near my home",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 7,
+              "label": "Opportunities to travel",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 8,
+              "label": "Using my talents",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": false,
+              "specify": false
+            }
+          ]
+        },
+        {
+          "id": "STU-K04",
+          "uid": "STU_7_10.STU_K04",
+          "variable": "career_education_knowledge",
+          "text": "How much do you know about different careers and the education needed to enter them?",
+          "type": "single",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "RESEARCH_INDICATOR",
+          "constructs": [
+            "CON_J04"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "A lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Quite a lot",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Some",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Very little",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Almost nothing",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            }
+          ],
+          "ordinal": true
+        },
+        {
+          "id": "STU-K05",
+          "uid": "STU_7_10.STU_K05",
+          "variable": "career_influencers",
+          "text": "Who influences your ideas about your future career the most?",
+          "type": "multi",
+          "required": true,
+          "sensitivity": "STANDARD",
+          "scoring_category": "DESCRIPTIVE",
+          "constructs": [
+            "CON_J05"
+          ],
+          "options": [
+            {
+              "code": 1,
+              "label": "My own interests",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 2,
+              "label": "Parents/family",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 3,
+              "label": "Teachers",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 4,
+              "label": "Friends",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 5,
+              "label": "Social media/internet",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 6,
+              "label": "People I know personally",
+              "role": "VALUE",
+              "exclusive": false,
+              "specify": false
+            },
+            {
+              "code": 97,
+              "label": "I am not sure",
+              "role": "NOT_SURE",
+              "exclusive": true,
+              "specify": false
+            },
+            {
+              "code": 0,
+              "label": "No one in particular",
+              "role": "NONE_EXCLUSIVE",
+              "exclusive": true,
+              "specify": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "L",
+      "title": "Student Voice",
+      "questions": [
+        {
+          "id": "STU-L01",
+          "uid": "STU_7_10.STU_L01",
+          "variable": "biggest_study_difficulty_text",
+          "text": "What is the biggest thing that makes studying difficult for you?",
+          "type": "text",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "STU-L02",
+          "uid": "STU_7_10.STU_L02",
+          "variable": "school_improvement_text",
+          "text": "What is one thing your school could do that would help you learn better?",
+          "type": "text",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "STU-L03",
+          "uid": "STU_7_10.STU_L03",
+          "variable": "adults_misunderstand_text",
+          "text": "What is one thing adults often misunderstand about students your age?",
+          "type": "text",
+          "required": false,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        },
+        {
+          "id": "STU-L04",
+          "uid": "STU_7_10.STU_L04",
+          "variable": "help_area_text",
+          "text": "If you could receive help with one area of your education or future, what would you choose?",
+          "type": "text",
+          "required": true,
+          "sensitivity": "SENSITIVE",
+          "scoring_category": "NOT_SCORABLE",
+          "constructs": [
+            "CON_K01"
+          ],
+          "max_length": 2000
+        }
+      ]
+    }
+  ]
+}
