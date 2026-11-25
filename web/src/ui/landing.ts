@@ -64,8 +64,9 @@ export class Landing {
     const choices = classChoices(this.opts.index, this.opts.info, role);
     const list = h('div', { class: role === 'student' ? 'choice-grid' : 'choice-list' });
     for (const c of choices) {
-      const label = role === 'student'
-        ? t('landing.class_option', { n: c.value })
+      // A teacher band the school offers only one class of reads "Class 11", not "Classes 11–11".
+      const label = role === 'student' || c.classes.length === 1
+        ? t('landing.class_option', { n: c.classes[0] })
         : t('landing.band_option', { from: c.classes[0], to: c.classes[c.classes.length - 1] });
       list.append(h('button', { type: 'button', class: 'btn choice', 'data-class': c.value, onclick: () => this.open(role, c) }, label));
     }

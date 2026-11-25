@@ -149,6 +149,12 @@ describe('landing screens', () => {
     expect(root().textContent).toContain('Which classes do you mainly teach?');
   });
 
+  it('a teacher band with a single offered class reads "Class N"', () => {
+    landing(active([9, 10, 11])).start();
+    click('I am a teacher');
+    expect(buttons().map((b) => b.textContent)).toEqual(['Classes 9–10', 'Class 11', 'Back']);
+  });
+
   it('a link with one role skips the role question', () => {
     landing(active([11, 12], ['STU_11_12_V1.0'])).start();
     expect(root().textContent).toContain('Which class are you in?');

@@ -2,7 +2,14 @@
 
 Last updated: 2026-11-22 · Updated by: Claude
 
-## Current phase: Platform build — **M2 school registration + school links: built and tested locally, not yet deployed** (needs the owner's Google and GitHub accounts). M1 renderer done. Next: deploy M2, then M3 (submission).
+## Current phase: Platform build — **M2 deployed for the pilot (2026-11-25).** Next: M3 (submission). M1 renderer done.
+
+### Deployment (2026-11-25, DEC-28)
+- **Site:** https://karbrabamdipankar-art.github.io/beginners-survey/ (GitHub Pages via Actions; public repo `karbrabamdipankar-art/beginners-survey`, code + instrument JSON only).
+- **Google:** spreadsheet `Beginners_Research_Data` + bound script, owned by the owner's personal Gmail for the pilot (move to an organisation account before full fieldwork; the API URL will change then). Script properties `ADMIN_EMAILS`, `SITE_URL` set. Public web app deployed; its `/exec` URL is the repo variable `API_URL`.
+- **Checked live:** anonymous `school_info` answers (unknown token → unavailable; test school → status/classes/instruments only, no school details); admin dialog opens for the allow-listed account; test school `ML-EKH-0001` registered ACTIVE through the dialog; its link at phone size asks student/teacher, offers only Classes 9–11, opens the Class 11–12 survey after consent without STU_A05; storage keys hold no token. Fixed after the live check: a teacher band with one offered class now reads "Class 11", not "Classes 11–11".
+- **Updating:** `apps-script/README.md` → "Updating with clasp" (always redeploy to the same deployment ID).
+- **Still to do by hand:** the admin dialog's dropdowns cannot be driven by automation, so staff register schools themselves. Close the test school `ML-EKH-0001` (or keep it closed) before real use.
 
 ### Completed in this stage (M2)
 - **`/apps-script`** (bound to the research spreadsheet; see `apps-script/README.md` for the 15-minute setup):
@@ -39,6 +46,7 @@ Added: `apps-script/**`, `web/src/{routing,school,mock-api}.ts`, `web/src/ui/lan
 2. **M3 — submission**: `doPost submit` (validate token/status/window/instrument/every answer against the JSON, idempotent on `submission_id`, one `appendRow` under lock), `R_<version>` tabs, fill `#SYSTEM_FILLED` with school_code, class/route mismatch flag, restricted contacts spreadsheet, outbox sender with backoff + jitter.
 
 ### Stage log
+- 2026-11-25: M2 deployed for the pilot (DEC-28). Live checks passed; teacher single-class label fixed.
 - 2026-11-22: M2 built and tested locally (237 web + 11 Apps Script tests). DEC-26, DEC-27; docs/22 v1.3.
 - 2026-11-22: M1 renderer built and tested (218 tests). DEC-24, DEC-25.
 - 2026-11-22: DEC-23 school link never shows the school name (docs/22 v1.2).

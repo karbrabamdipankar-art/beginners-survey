@@ -38,7 +38,7 @@ A web platform to (1) run research surveys of students and teachers in Classes 7
 - Plain, respectful language in UI text. UI strings in a translation file (Khasi/Garo translations come later).
 
 ## Current milestone
-**M2 deploy, then M3 — Submission** (docs/22 §5, §6, §9). M1 renderer and M2 school registry/links are built and tested (see PROJECT_STATUS.md, `web/README.md`, `apps-script/README.md`). Run `npm test` in `/web` and `node --test "apps-script/test/*.test.mjs"` after any change. M2 deployment waits for the owner's Google Workspace account and GitHub repository.
+**M3 — Submission** (docs/22 §5, §6, §9). M1 renderer and M2 school registry/links are built and deployed for the pilot (see PROJECT_STATUS.md "Deployment", `web/README.md`, `apps-script/README.md`). Run `npm test` in `/web` and `node --test "apps-script/test/*.test.mjs"` after any change. Script updates: clasp push + redeploy to the same deployment ID.
 
 ## Owner inputs still needed (ask when the milestone needs them)
 - Organisation Google Workspace account to own the Sheets and the script (strongly preferred over personal Gmail)
