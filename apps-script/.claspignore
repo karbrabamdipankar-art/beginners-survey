@@ -1,0 +1,4 @@
+test/**
+**/*.mjs
+README.md
+node_modules/**

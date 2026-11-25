@@ -27,6 +27,17 @@ Use the **organisation Google Workspace account**, not a personal Gmail.
 
 After code changes: *Deploy → Manage deployments → Edit → New version*, so the `/exec` URL stays the same.
 
+### Updating with clasp (how the pilot was deployed, 2026-11-25)
+
+The pilot script was created and is updated from this folder with Google's clasp tool (needs "Google Apps Script API" ON at script.google.com/home/usersettings, and `npx @google/clasp@3.3.0 login` once). `.clasp.json` (script ID) stays on the project PC and is git-ignored; `.claspignore` keeps tests out of uploads.
+
+```
+npx @google/clasp@3.3.0 push --force
+npx @google/clasp@3.3.0 create-deployment --deploymentId <live deployment ID> --description "what changed"
+```
+
+Always pass `--deploymentId` with the live deployment ID (shown in *Deploy → Manage deployments*): a new deployment would get a new `/exec` URL and the site's `API_URL` would have to change. Note: `clasp create` replaces `appsscript.json` with Google's default; restore ours before pushing.
+
 ## How staff use it
 
 *The Beginners → School admin* opens the dialog:
