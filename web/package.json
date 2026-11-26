@@ -9,7 +9,8 @@
     "build": "npm run instruments && tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "apps-script": "node scripts/build-apps-script.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

@@ -23,6 +23,14 @@ export function buildRegistry() {
       if (!ids.has(qid)) throw new Error(`system_fill: ${inst.instrument_version_id} has no question ${qid}`);
       if (source !== 'school_code') throw new Error(`system_fill: unknown source ${source}`);
     }
+    const routeCheck = (deploy.route_check ?? {})[inst.instrument_version_id] ?? null;
+    if (routeCheck) {
+      const q = inst.sections.flatMap((s) => s.questions).find((x) => x.id === routeCheck.question);
+      if (!q) throw new Error(`route_check: ${inst.instrument_version_id} has no question ${routeCheck.question}`);
+      for (const code of Object.keys(routeCheck.codes)) {
+        if (!(q.options ?? []).some((o) => String(o.code) === code)) throw new Error(`route_check: ${routeCheck.question} has no option ${code}`);
+      }
+    }
     files[file] = inst;
     index.push({
       instrument_version_id: inst.instrument_version_id,
@@ -32,6 +40,7 @@ export function buildRegistry() {
       class_range: inst.class_range ?? [],
       status: inst.status,
       system_fill: systemFill,
+      route_check: routeCheck,
       file,
     });
   }

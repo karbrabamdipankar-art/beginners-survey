@@ -23,4 +23,4 @@ Entry points:
 
 Local testing of school links without Apps Script: create `web/.env.development.local` with `VITE_API_URL=mock` and run `npm run dev`, then open `/?s=` plus a 43-character test token. Its first letter picks the case (see `src/mock-api.ts`): `A` all classes, `J` Classes 7–10, `S` Classes 11–12 students only, `W` not yet open, `C` closed. The mock is never in production builds.
 
-Finished responses on a school link go to an on-device outbox (`beginners.outbox.*`); M3 sends them.
+Finished responses on a school link go to an on-device outbox (`beginners.outbox.*`) and are sent by `src/outbox.ts`: at once, then with exponential backoff + jitter, on reconnect and on every page load. A permanent refusal keeps the response on the device and stops retrying. `npm run apps-script` bundles `src/engine` + the instruments into `/apps-script` so the server applies the same rules.

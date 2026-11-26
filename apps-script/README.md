@@ -6,7 +6,9 @@ One Apps Script project, **bound to the research spreadsheet** `Beginners_Resear
 |---|---|
 | `Core.js` | All logic: form checks, school codes, 256-bit tokens, activation rule, `school_info`. No Google services, so it is tested locally. |
 | `Store.js` | Reads and writes the tabs; `setupTabs_` creates them. |
-| `Api.js` | Public web app: `GET ?action=school_info&s=<token>` only. `submit` comes in M3. |
+| `Api.js` | Public web app: `GET ?action=school_info&s=<token>` and `POST {action:"submit"}` (Google-side glue). |
+| `Submit.js` | The submit rules: refusals, re-checking answers, duplicate check, row and contact-request building (DEC-29). Tested locally. |
+| `Engine.js`, `Instruments.js` | **Generated** by `npm run apps-script` in `/web` (the app's logic engine and the deployable instruments). Git-ignored; regenerate before every `clasp push`. |
 | `Admin.js` + `AdminDialog.html` | Staff admin inside the spreadsheet (menu **The Beginners → School admin**). Allow-listed accounts only (DEC-26). |
 | `test/core.test.mjs` | `node --test "apps-script/test/*.test.mjs"` (also runs in GitHub Actions). |
 
@@ -32,6 +34,7 @@ After code changes: *Deploy → Manage deployments → Edit → New version*, so
 The pilot script was created and is updated from this folder with Google's clasp tool (needs "Google Apps Script API" ON at script.google.com/home/usersettings, and `npx @google/clasp@3.3.0 login` once). `.clasp.json` (script ID) stays on the project PC and is git-ignored; `.claspignore` keeps tests out of uploads.
 
 ```
+cd ../web && npm run apps-script && cd ../apps-script   # regenerate Engine.js + Instruments.js
 npx @google/clasp@3.3.0 push --force
 npx @google/clasp@3.3.0 create-deployment --deploymentId <live deployment ID> --description "what changed"
 ```
@@ -56,3 +59,10 @@ Every action is written to the `Audit` tab with the staff account and time.
 - Duplicate UDISE codes are refused. Tokens are 256 random bits.
 - Survey dates are compared in India time; outside the window the link says not yet open / closed.
 - Instruments can be paused centrally in the `Config` tab (status other than ACTIVE).
+
+## Submissions (M3)
+
+- Each finished response becomes one row in `R_<instrument_version_id>` (created on first use): system columns, then one column per variable, then other-text columns (docs/22 §5). Sending twice stores it once.
+- Contact-request answers go to `Beginners_Restricted_Contacts` → `Contact_Requests` (created by *Set up / repair tabs*; ID in Script property `RESTRICTED_SPREADSHEET_ID`). Only the owner can open it; share it with the safeguarding lead alone.
+- `Audit` records `submit`, `reject` (with reason) and `create_tab`, never answer content.
+- The `flags` column lists anything for data review: `INVALID:…`, `MISSING_REQUIRED:…`, `ROUTE_CLASS_MISMATCH`, `LATE_SYNC`, `SOFT_RANGE:…`.

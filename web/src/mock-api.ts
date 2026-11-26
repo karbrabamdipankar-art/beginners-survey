@@ -18,3 +18,10 @@ export const mockFetcher: Fetcher = async (url) => {
   await new Promise((r) => setTimeout(r, 150));
   return { ok: true, json: async () => info };
 };
+
+/** Development stand-in for `submit`: accepts everything after a short delay. */
+export const mockPoster = async (_url: string, body: string) => {
+  const p = JSON.parse(body) as { submission_id: string };
+  await new Promise((r) => setTimeout(r, 400));
+  return { ok: true, status: 200, json: async () => ({ ok: true, submission_id: p.submission_id }) };
+};

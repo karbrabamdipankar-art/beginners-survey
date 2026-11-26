@@ -8,13 +8,16 @@ import { h } from './ui/dom';
 import { Survey } from './ui/survey';
 import { Landing } from './ui/landing';
 import { getSchoolInfo, tokenContext } from './school';
-import { mockFetcher } from './mock-api';
+import { mockFetcher, mockPoster } from './mock-api';
+import { flushOutbox, sendOne, startOutboxSender } from './outbox';
 import type { IndexEntry } from './routing';
 import type { Instrument } from './types';
 
 const root = document.getElementById('app')!;
 const base = import.meta.env.BASE_URL;
 const apiUrl = (import.meta.env.VITE_API_URL as string | undefined)?.trim() ?? '';
+/** Development only: VITE_API_URL=mock answers submissions locally (never in production builds). */
+const mockPost = import.meta.env.DEV && apiUrl === 'mock' ? mockPoster : undefined;
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(`${base}${path}`, { cache: 'no-cache' });
@@ -53,7 +56,8 @@ async function startSchoolLink(token: string): Promise<void> {
   const context = await tokenContext(token);
   const fetcher = import.meta.env.DEV && apiUrl === 'mock' ? mockFetcher : undefined;
   const [index, result] = await Promise.all([loadIndex(), getSchoolInfo(apiUrl, token, context, fetcher)]);
-  new Landing({ root, index, info: result.info, context, offline: result.fromCache, loadInstrument }).start();
+  const send = (id: string) => sendOne(id, { apiUrl, post: mockPost });
+  new Landing({ root, index, info: result.info, context, offline: result.fromCache, loadInstrument, token, send }).start();
 }
 
 async function startPreview(wanted: string | null): Promise<void> {
@@ -89,6 +93,12 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
       reg.active?.postMessage({ cache: urls });
     })
     .catch(() => { /* offline support is a bonus; the survey still works online */ });
+}
+
+// Finished responses waiting on this device (from earlier visits too) are sent in the background.
+if (apiUrl && !new URLSearchParams(location.search).has('preview')) {
+  if (mockPost) void flushOutbox({ apiUrl, post: mockPost });
+  else startOutboxSender(apiUrl);
 }
 
 start();

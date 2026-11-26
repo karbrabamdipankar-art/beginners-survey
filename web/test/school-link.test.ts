@@ -113,7 +113,7 @@ describe('landing screens', () => {
     b.click();
   };
   const loadInst = async (e: IndexEntry) => structuredClone(files[e.file]);
-  const landing = (info: SchoolInfo, offline = false) => new Landing({ root: root(), index, info, context: 'sTEST', offline, loadInstrument: loadInst });
+  const landing = (info: SchoolInfo, offline = false) => new Landing({ root: root(), index, info, context: 'sTEST', offline, loadInstrument: loadInst, token: TOKEN, send: async () => 'queued' as const });
   const settle = () => new Promise((r) => setTimeout(r, 0));
 
   beforeEach(() => {

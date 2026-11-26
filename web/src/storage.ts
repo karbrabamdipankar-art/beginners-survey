@@ -94,18 +94,33 @@ export function clearDraft(key: string, store: KeyValueStore | null = defaultSto
   }
 }
 
-/* ---------- outbox: finished responses waiting to be sent (sending arrives in M3) ---------- */
+/* ---------- outbox: finished responses waiting to be sent (see outbox.ts) ---------- */
 
-const OUTBOX_PREFIX = 'beginners.outbox.';
+export const OUTBOX_PREFIX = 'beginners.outbox.';
+
+/** A finished response plus what is needed to send it later, possibly offline for days. */
+export interface OutboxEntry extends Draft {
+  /** The school link token. Needed to submit; stored in the value, never in a key (DEC-27). */
+  s: string;
+  attempts?: number;
+  /** ISO time before which no new attempt is made (backoff). */
+  next_at?: string;
+  last_error?: string;
+  /** Set when the server refused it for good; it stays on the device and is not retried. */
+  rejected?: string;
+}
+
+export type OutboxStore = KeyValueStore & { length: number; key(i: number): string | null };
 
 /**
  * Moves a finished draft out of the way so the next person on a shared school device starts
  * fresh, while the response is kept until it has been sent.
  */
-export function moveToOutbox(key: string, draft: Draft, store: KeyValueStore | null = defaultStore()): boolean {
+export function moveToOutbox(key: string, draft: Draft, token: string, store: KeyValueStore | null = defaultStore()): boolean {
   if (!store) return false;
   try {
-    store.setItem(OUTBOX_PREFIX + draft.submission_id, JSON.stringify(draft));
+    const entry: OutboxEntry = { ...draft, s: token, attempts: 0 };
+    store.setItem(OUTBOX_PREFIX + draft.submission_id, JSON.stringify(entry));
     store.removeItem(key);
     return true;
   } catch {
@@ -113,7 +128,7 @@ export function moveToOutbox(key: string, draft: Draft, store: KeyValueStore | n
   }
 }
 
-export function outboxIds(store: (KeyValueStore & { length: number; key(i: number): string | null }) | null = (defaultStore() as never)): string[] {
+export function outboxIds(store: OutboxStore | null = defaultStore() as OutboxStore | null): string[] {
   if (!store) return [];
   const ids: string[] = [];
   try {
@@ -125,4 +140,29 @@ export function outboxIds(store: (KeyValueStore & { length: number; key(i: numbe
     /* ignore */
   }
   return ids;
+}
+
+export function readOutbox(id: string, store: KeyValueStore | null = defaultStore()): OutboxEntry | null {
+  try {
+    const raw = store?.getItem(OUTBOX_PREFIX + id);
+    return raw ? (JSON.parse(raw) as OutboxEntry) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function writeOutbox(entry: OutboxEntry, store: KeyValueStore | null = defaultStore()): void {
+  try {
+    store?.setItem(OUTBOX_PREFIX + entry.submission_id, JSON.stringify(entry));
+  } catch {
+    /* storage full: the entry keeps its previous state */
+  }
+}
+
+export function removeOutbox(id: string, store: KeyValueStore | null = defaultStore()): void {
+  try {
+    store?.removeItem(OUTBOX_PREFIX + id);
+  } catch {
+    /* ignore */
+  }
 }

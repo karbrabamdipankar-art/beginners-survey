@@ -49,7 +49,7 @@
   "err.too_many": "Please choose no more than {max}.",
   "err.invalid_option": "Please choose your answer again.",
   "done.title": "Thank you",
-  "done.body": "You have finished the survey. Thank you. Your answers are saved on this device and will be sent when the connection allows.",
+  "done.body": "You have finished the survey. Thank you.",
   "done.preview_body": "Preview finished. In a real survey your answers would now be sent. The record below is what would be stored.",
   "done.new": "Next person: start a new survey",
   "home.title": "The Beginners survey",
@@ -72,5 +72,9 @@
   "landing.not_yet_open_body": "This survey has not opened yet. Please try again on the day your school was told.",
   "landing.closed_title": "This survey has closed",
   "landing.closed_body": "Thank you for your interest. This survey is no longer accepting responses.",
-  "landing.not_configured": "This copy of the site is not connected to the survey service yet."
+  "landing.not_configured": "This copy of the site is not connected to the survey service yet.",
+  "done.sending": "Sending your answers…",
+  "done.sent": "Your answers have been sent. Thank you for taking part.",
+  "done.queued": "Your answers are saved on this device. They will be sent automatically when there is a connection. You can close this page.",
+  "done.rejected": "We could not send these answers. They are kept on this device. Please tell the teacher or the person who gave you the link."
 }

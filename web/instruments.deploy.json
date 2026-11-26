@@ -11,5 +11,24 @@
     "STU_11_12_V1.0": {
       "STU_A05": "school_code"
     }
+  },
+  "route_check_comment": "Student instruments: the question that asks the class, and which option code means which class. The server flags ROUTE_CLASS_MISMATCH when it differs from the class chosen on the landing page (never blocks).",
+  "route_check": {
+    "STU_7_10_V1.1": {
+      "question": "STU-A01",
+      "codes": {
+        "1": 7,
+        "2": 8,
+        "3": 9,
+        "4": 10
+      }
+    },
+    "STU_11_12_V1.0": {
+      "question": "STU_A01",
+      "codes": {
+        "1": 11,
+        "2": 12
+      }
+    }
   }
 }

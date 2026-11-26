@@ -42,3 +42,7 @@ Thumbs.db
 
 # Generated at build time from /questionnaires (web/scripts/copy-instruments.mjs)
 web/public/instruments/
+
+# Generated for Apps Script by web/scripts/build-apps-script.mjs
+/apps-script/Engine.js
+/apps-script/Instruments.js

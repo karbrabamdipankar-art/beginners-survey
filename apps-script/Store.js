@@ -106,5 +106,39 @@ function setupTabs_() {
   if (audit.getProtections(SpreadsheetApp.ProtectionType.SHEET).length === 0) {
     audit.protect().setDescription('Audit log: written by the script').setWarningOnly(true);
   }
-  return report.length ? report : ['Everything was already set up.'];
+  report.push(ensureRestrictedSpreadsheet_());
+  return report;
+}
+
+/**
+ * Spreadsheet B (docs/22 §5): student contact requests, kept apart from the research data.
+ * Created by setupTabs_ and owned by the script owner only; share it with the safeguarding
+ * lead alone. Its ID is in Script property RESTRICTED_SPREADSHEET_ID.
+ */
+function restrictedSheet_() {
+  var id = PropertiesService.getScriptProperties().getProperty('RESTRICTED_SPREADSHEET_ID');
+  if (!id) throw new Error('Restricted contacts spreadsheet missing. Run "The Beginners → Set up / repair tabs".');
+  var ss = SpreadsheetApp.openById(id);
+  var sh = ss.getSheetByName('Contact_Requests');
+  if (!sh) {
+    sh = ss.insertSheet('Contact_Requests');
+    sh.getRange(1, 1, 1, CONTACT_REQUEST_HEADERS.length).setValues([CONTACT_REQUEST_HEADERS]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+  }
+  return sh;
+}
+
+function ensureRestrictedSpreadsheet_() {
+  var props = PropertiesService.getScriptProperties();
+  var id = props.getProperty('RESTRICTED_SPREADSHEET_ID');
+  if (id) {
+    try { SpreadsheetApp.openById(id); restrictedSheet_(); return 'Restricted contacts spreadsheet already set up.'; } catch (e) { /* recreate below */ }
+  }
+  var ss = SpreadsheetApp.create('Beginners_Restricted_Contacts');
+  props.setProperty('RESTRICTED_SPREADSHEET_ID', ss.getId());
+  var first = ss.getSheets()[0];
+  first.setName('Contact_Requests');
+  first.getRange(1, 1, 1, CONTACT_REQUEST_HEADERS.length).setValues([CONTACT_REQUEST_HEADERS]).setFontWeight('bold');
+  first.setFrozenRows(1);
+  return 'Created "Beginners_Restricted_Contacts" (only you can open it; share it with the safeguarding lead only).';
 }

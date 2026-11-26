@@ -104,3 +104,7 @@ textarea { resize: vertical; min-height: 5em; }
 .choice-list { display: flex; flex-direction: column; gap: 10px; margin: 12px 0 16px; }
 .choice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 12px 0 16px; }
 .btn.choice { width: 100%; min-height: 56px; font-size: 1.05rem; }
+
+.send-status { padding: 10px 12px; border-radius: var(--radius); background: var(--accent-soft); }
+.send-status.sent { font-weight: 600; }
+.send-status.rejected { background: var(--error-soft); color: var(--error); }

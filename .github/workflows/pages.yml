@@ -32,7 +32,7 @@ jobs:
       - run: npm run instruments
       - run: npm test
       - name: Apps Script logic tests
-        run: node --test "../apps-script/test/*.test.mjs"
+        run: npm run apps-script && node --test "../apps-script/test/*.test.mjs"
       - run: npm run build
         env:
           # Public Apps Script web app URL (ends in /exec). Set it under Settings > Secrets and

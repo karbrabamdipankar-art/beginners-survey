@@ -4,6 +4,7 @@
 import { t } from '../i18n';
 import { classChoices, rolesFor, type ClassChoice, type IndexEntry, type Role, type SchoolInfo } from '../routing';
 import type { Instrument } from '../types';
+import type { SendOutcome } from '../outbox';
 import { h } from './dom';
 import { Survey } from './survey';
 
@@ -18,6 +19,10 @@ export interface LandingOptions {
   context: string;
   offline: boolean;
   loadInstrument(entry: IndexEntry): Promise<Instrument>;
+  /** The school link token, kept with finished responses so they can be sent later. */
+  token: string;
+  /** Sends one finished response from the outbox now. */
+  send(submissionId: string): Promise<SendOutcome>;
 }
 
 export class Landing {
@@ -93,6 +98,7 @@ export class Landing {
         route: { role, class: choice.value },
         resumeMaxHours: SCHOOL_RESUME_MAX_HOURS,
         onNew: () => this.start(),
+        submit: { token: this.opts.token, send: (id) => this.opts.send(id) },
         onBack: () => this.chooseClass(role, rolesFor(this.opts.index, this.opts.info).length > 1),
       }).render();
     } catch {

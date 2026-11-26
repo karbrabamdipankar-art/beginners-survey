@@ -13,6 +13,7 @@ import {
 } from '../engine/logic';
 import { buildRecord, wideRow } from '../engine/record';
 import { clearDraft, draftKey, loadDraft, moveToOutbox, newDraft, saveDraft, type Draft } from '../storage';
+import type { SendOutcome } from '../outbox';
 import type { Answer, Instrument } from '../types';
 import { h } from './dom';
 import { renderQuestion } from './question';
@@ -33,6 +34,8 @@ export interface SurveyOptions {
   resumeMaxHours?: number;
   /** "Back" on the first screen (consent / resume), e.g. to the class question. */
   onBack?: () => void;
+  /** School links: where finished responses go (outbox + immediate send). Absent in preview. */
+  submit?: { token: string; send(submissionId: string): Promise<SendOutcome> };
 }
 
 type Screen = 'resume' | 'consent' | 'declined' | 'section' | 'done';
@@ -247,7 +250,10 @@ export class Survey {
       // Preview keeps the draft so the record can be shown; a real response goes to the
       // outbox so the next person on a shared school device starts fresh.
       if (this.opts.preview) this.persist();
-      else moveToOutbox(this.key, this.draft);
+      else if (this.opts.submit) {
+        moveToOutbox(this.key, this.draft, this.opts.submit.token);
+        this.sending = this.opts.submit.send(this.draft.submission_id);
+      }
       return this.go('done');
     }
     this.draft.section_index = Math.max(0, nextIndex);
@@ -255,8 +261,22 @@ export class Survey {
     this.go('section');
   }
 
+  private sending: Promise<SendOutcome> | null = null;
+
   private renderDone(main: HTMLElement): void {
-    main.append(h('h1', { tabindex: -1 }, t('done.title')), h('p', {}, t(this.opts.preview ? 'done.preview_body' : 'done.body')));
+    main.append(h('h1', { tabindex: -1 }, t('done.title')));
+    if (this.opts.preview) main.append(h('p', {}, t('done.preview_body')));
+    else {
+      // Live status of the upload; the response is already safe in the outbox.
+      const status = h('p', { class: 'send-status', role: 'status', 'aria-live': 'polite' }, t('done.sending'));
+      main.append(status);
+      const pending = this.sending;
+      if (pending) {
+        pending
+          .then((outcome) => { status.textContent = t(`done.${outcome}`); status.className = `send-status ${outcome}`; })
+          .catch(() => { status.textContent = t('done.queued'); });
+      } else status.textContent = t('done.queued');
+    }
     if (this.opts.preview) {
       const record = buildRecord(this.idx, this.draft.answers);
       const out = {
