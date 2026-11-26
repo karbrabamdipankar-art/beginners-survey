@@ -2,7 +2,24 @@
 
 Last updated: 2026-11-22 · Updated by: Claude
 
-## Current phase: Platform build — **M2 deployed for the pilot (2026-11-25).** Next: M3 (submission). M1 renderer done.
+## Current phase: Platform build — **M3 submission done and live (2026-11-27).** Next: M4 (monitoring + CSV/codebook export). M1 and M2 done and deployed.
+
+### Completed in this stage (M3)
+- **Server** (`apps-script/Submit.js` + `Api.js doPost`): validates link, school status, survey window, instrument offered, consent; re-checks every answer with the app's own engine (bundled into `Engine.js` by `npm run apps-script`); writes one row per response to `R_<version>` (created on first use) under one lock; idempotent on `submission_id`; `#SYSTEM_FILLED` → school code; formula-safe text; per-link rate limit; audit of submit/reject. Rules in DEC-29.
+- **Restricted contacts:** `Beginners_Restricted_Contacts` spreadsheet (created by *Set up / repair tabs*, owner-only) receives STU_G08 / STU_L08 answers; never the research row.
+- **App** (`web/src/outbox.ts`): finished responses queue on the device and are sent at once, then with exponential backoff + jitter (2 s → 5 min cap), on reconnect and on every load; permanent refusals stay on the device and stop retrying. Finish screen says sending / sent / saved-will-send / please tell your teacher.
+- Script permission widened from "this spreadsheet only" to Sheets (needed for the restricted spreadsheet); owner re-authorised 2026-11-27.
+
+### Tests performed (M3)
+- `web`: **246 pass** (8 new: payload, sent/duplicate/refused/backoff paths, jitter cap, finish-screen messages). Typecheck + build pass.
+- `apps-script`: **20 pass** (9 new submit tests run the real Core/Engine/Instruments/Submit files in a sandbox: full row, duplicates, refusals, #INVALID storage, formula safety, class mismatch, late-sync window, busy/rate-limit, all four instruments accept a complete response).
+- **Live:** a complete STU_11_12 response posted directly → `R_STU_11_12_V1.0` row (school code filled, duration, no flags); sent again → `duplicate: true`, still one row; both contact answers in the restricted spreadsheet once. A complete STU_7_10 response finished **in the browser on the live site** (phone size) → "Your answers have been sent", outbox emptied, row in `R_STU_7_10_V1.1` with no flags.
+- **Noticed:** first load of a school link took ~8 s (Apps Script cold start). Sheets shows `route_class` "11" as a number; harmless.
+
+### Before real data collection
+- **Remove the two test rows** (tabs `R_STU_11_12_V1.0`, `R_STU_7_10_V1.1`, both school `ML-EKH-0001`, text answers "…test - please ignore") and the two test rows in `Beginners_Restricted_Contacts`, and close test school `ML-EKH-0001` again.
+- **Owner decision (LOG-014):** how a "Yes" to the support-contact questions is followed up, since no student contact details are collected.
+- Consent/assent text approval; real schools with real safeguarding contacts; organisation Google account before full fieldwork.
 
 ### Deployment (2026-11-25, DEC-28)
 - **Site:** https://karbrabamdipankar-art.github.io/beginners-survey/ (GitHub Pages via Actions; public repo `karbrabamdipankar-art/beginners-survey`, code + instrument JSON only).
@@ -48,6 +65,7 @@ Added: `apps-script/**`, `web/src/{routing,school,mock-api}.ts`, `web/src/ui/lan
 2. **M3 — submission**: `doPost submit` (validate token/status/window/instrument/every answer against the JSON, idempotent on `submission_id`, one `appendRow` under lock), `R_<version>` tabs, fill `#SYSTEM_FILLED` with school_code, class/route mismatch flag, restricted contacts spreadsheet, outbox sender with backoff + jitter.
 
 ### Stage log
+- 2026-11-27: M3 submission built, deployed and checked live (246 web + 20 Apps Script tests). DEC-29; LOG-014 open.
 - 2026-11-25: M2 deployed for the pilot (DEC-28). Live checks passed; teacher single-class label and admin confirmations fixed; test school closed.
 - 2026-11-22: M2 built and tested locally (237 web + 11 Apps Script tests). DEC-26, DEC-27; docs/22 v1.3.
 - 2026-11-22: M1 renderer built and tested (218 tests). DEC-24, DEC-25.
