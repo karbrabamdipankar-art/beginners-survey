@@ -17,7 +17,7 @@ Last updated: 2026-11-22 · Updated by: Claude
 - **Noticed:** first load of a school link took ~8 s (Apps Script cold start). Sheets shows `route_class` "11" as a number; harmless.
 
 ### Before real data collection
-- **Remove the two test rows** (tabs `R_STU_11_12_V1.0`, `R_STU_7_10_V1.1`, both school `ML-EKH-0001`, text answers "…test - please ignore") and the two test rows in `Beginners_Restricted_Contacts`, and close test school `ML-EKH-0001` again.
+- ~~Remove test data~~ **Done 2026-11-27:** both test `R_` tabs and the two test rows in `Beginners_Restricted_Contacts` are deleted (the tabs are recreated on the first real response); test school `ML-EKH-0001` is CLOSED (its link answers `unavailable`). The `Audit` tab still lists the test events (no answer content).
 - **Owner decision (LOG-014):** how a "Yes" to the support-contact questions is followed up, since no student contact details are collected.
 - Consent/assent text approval; real schools with real safeguarding contacts; organisation Google account before full fieldwork.
 
