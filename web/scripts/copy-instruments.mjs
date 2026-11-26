@@ -31,6 +31,10 @@ export function buildRegistry() {
         if (!(q.options ?? []).some((o) => String(o.code) === code)) throw new Error(`route_check: ${routeCheck.question} has no option ${code}`);
       }
     }
+    const gate = inst.settings.research_permission_gate;
+    const permissionYes = (deploy.research_permission_yes ?? {})[inst.instrument_version_id] ?? null;
+    if (gate && !permissionYes) throw new Error(`research_permission_yes: ${inst.instrument_version_id} has gate ${gate} but no "yes" codes`);
+    if (!gate && permissionYes) throw new Error(`research_permission_yes: ${inst.instrument_version_id} has no research_permission_gate`);
     files[file] = inst;
     index.push({
       instrument_version_id: inst.instrument_version_id,
@@ -41,6 +45,7 @@ export function buildRegistry() {
       status: inst.status,
       system_fill: systemFill,
       route_check: routeCheck,
+      research_permission_yes: permissionYes,
       file,
     });
   }

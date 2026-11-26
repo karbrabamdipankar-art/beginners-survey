@@ -2,12 +2,12 @@
 
 | Field | Value |
 |---|---|
-| Version | 1.4 |
+| Version | 1.5 |
 | Date | 2026-11-22 |
 | Status | APPROVED. Owner constraints: Google Sheets storage, GitHub hosting, all schools eligible, school registration generates the survey link (DEC-20, DEC-21, DEC-22) |
 | Dependencies | docs/21 instrument format; questionnaires/*/<ID>_V*.json; docs/20 Part D |
 
-**Change history:** 1.0 (2026-11-22) first version · 1.1 (2026-11-22) all schools eligible, including Shillong; registration-first school links replace per-campaign tokens · 1.2 (2026-11-22) the link never shows the school name (DEC-23) · 1.3 (2026-11-22) staff admin is a dialog inside the research spreadsheet (DEC-26); shared-device rules (DEC-27) · 1.4 (2026-11-27) submit implemented as specified, with refusal and late-sync rules (DEC-29).
+**Change history:** 1.0 (2026-11-22) first version · 1.1 (2026-11-22) all schools eligible, including Shillong; registration-first school links replace per-campaign tokens · 1.2 (2026-11-22) the link never shows the school name (DEC-23) · 1.3 (2026-11-22) staff admin is a dialog inside the research spreadsheet (DEC-26); shared-device rules (DEC-27) · 1.4 (2026-11-27) submit implemented as specified, with refusal and late-sync rules (DEC-29) · 1.5 (2026-11-27) monitoring and research export in the admin dialog; export only with research permission (DEC-30).
 
 ## 1. Shape of the system
 

@@ -30,5 +30,11 @@
         "2": 12
       }
     }
+  },
+  "research_permission_comment": "Instruments with a research-use question (settings.research_permission_gate): the option codes that mean 'yes, you may use my answers'. Research exports include only those rows (DEC-30). Instruments without a gate are always included.",
+  "research_permission_yes": {
+    "STU_11_12_V1.0": [
+      1
+    ]
   }
 }

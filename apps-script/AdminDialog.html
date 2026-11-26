@@ -32,10 +32,20 @@
   h3 { margin: 4px 0 8px; } .hint { color: #666; font-weight: normal; font-size: 12px; }
   .link { word-break: break-all; font-family: monospace; background: #f5f7fa; padding: 6px; }
   #panel { display: none; } #panel.open { display: block; }
+  .tabs { display: flex; gap: 4px; padding: 8px 14px 0; border-bottom: 1px solid #ddd; background: #fff; }
+  .tabs button { border: 1px solid #ddd; border-bottom: 0; background: #f5f7fa; border-radius: 6px 6px 0 0; margin: 0; }
+  .tabs button[aria-selected="true"] { background: #fff; font-weight: bold; position: relative; top: 1px; }
+  td.num, th.num { text-align: right; } tr.total td { font-weight: bold; border-top: 2px solid #ccc; }
+  .export-item { border: 1px solid #ddd; border-radius: 6px; padding: 10px; margin-bottom: 10px; }
 </style>
 </head>
 <body>
-<header>
+<nav class="tabs" role="tablist">
+  <button role="tab" id="tab-schools" aria-selected="true" onclick="showView('schools')">Schools</button>
+  <button role="tab" id="tab-responses" aria-selected="false" onclick="showView('responses')">Responses</button>
+  <button role="tab" id="tab-export" aria-selected="false" onclick="showView('export')">Export data</button>
+</nav>
+<header id="schools-bar">
   <button class="primary" onclick="openForm()">+ Register school</button>
   <input id="filter" placeholder="Filter by name, code or district" oninput="renderList()">
   <span id="count" class="hint"></span>
@@ -200,6 +210,57 @@ function save(ev, code) {
   };
   if (code) call('adminUpdate', [code, data], done); else call('adminRegister', [data], done);
   return false;
+}
+
+/* ----- Responses and Export views (M4) ----- */
+var view = 'schools';
+function showView(v) {
+  view = v;
+  ['schools', 'responses', 'export'].forEach(function (k) { document.getElementById('tab-' + k).setAttribute('aria-selected', String(k === v)); });
+  document.getElementById('schools-bar').style.display = v === 'schools' ? '' : 'none';
+  closePanel(); msg('');
+  if (v === 'schools') return renderList();
+  document.getElementById('list').innerHTML = 'Loading…';
+  if (v === 'responses') call('adminResponseSummary', [], renderResponses);
+  else call('adminListInstruments', [], renderExportList);
+}
+
+function renderResponses(sum) {
+  var vs = sum.versions;
+  var h = '<p class="hint">Counted ' + esc(new Date(sum.generated_at).toLocaleString()) + '. Rows with flags need a look in the R_ tab (flags column).</p>';
+  if (!vs.length) { document.getElementById('list').innerHTML = h + '<p>No responses yet.</p>'; return; }
+  h += '<table><tr><th>Code</th><th>School</th><th>Status</th>' + vs.map(function (v) { return '<th class="num">' + esc(v) + '</th>'; }).join('') +
+    '<th class="num">Total</th><th class="num">Flagged</th><th>Last received</th></tr>';
+  sum.schools.forEach(function (s) {
+    h += '<tr><td>' + esc(s.school_code) + '</td><td>' + esc(s.name) + '</td><td><span class="st ' + esc(s.status) + '">' + esc(s.status) + '</span></td>' +
+      vs.map(function (v) { return '<td class="num">' + (s.counts[v] || 0) + '</td>'; }).join('') +
+      '<td class="num">' + s.total + '</td><td class="num">' + (s.flagged || '') + '</td><td>' + (s.last_received ? esc(new Date(s.last_received).toLocaleString()) : '') + '</td></tr>';
+  });
+  h += '<tr class="total"><td></td><td>All schools</td><td></td>' + vs.map(function (v) { return '<td class="num">' + sum.totals[v] + '</td>'; }).join('') +
+    '<td class="num">' + sum.total + '</td><td></td><td></td></tr></table>';
+  if (sum.unknown_school_rows) h += '<p class="warn">' + sum.unknown_school_rows + ' response row(s) have a school code that is not in the Schools tab.</p>';
+  document.getElementById('list').innerHTML = h;
+}
+
+function renderExportList(list) {
+  var h = '<p>Each export makes a new private spreadsheet in your Google Drive with these tabs: <b>data_codes</b> (answers as codes), <b>data_labels</b> (answers as words), <b>codebook</b>, <b>status_tokens</b> and <b>about</b>. ' +
+    'Only responses with research permission are included. Support-contact answers are never included. Download a tab as CSV with File → Download.</p>';
+  list.forEach(function (i) {
+    h += '<div class="export-item"><b>' + esc(i.id) + '</b><br><span class="hint">' + esc(i.title) + '</span><br>' +
+      '<button data-id="' + esc(i.id) + '" onclick="runExport(this.dataset.id, this)">Create export</button> <span id="ex-' + esc(i.id).replace(/[^A-Za-z0-9_]/g, '_') + '"></span></div>';
+  });
+  document.getElementById('list').innerHTML = h;
+}
+
+function runExport(id, btn) {
+  var out = document.getElementById('ex-' + id.replace(/[^A-Za-z0-9_]/g, '_'));
+  btn.disabled = true; out.textContent = 'Creating… (large exports can take a minute)';
+  google.script.run.withSuccessHandler(function (r) {
+    btn.disabled = false;
+    if (!r.ok) { out.textContent = r.message; return; }
+    out.innerHTML = 'Done: ' + r.included + ' response(s) exported' + (r.excluded ? ', ' + r.excluded + ' left out (no research permission)' : '') +
+      '. <a href="' + esc(r.url) + '" target="_blank" rel="noopener">Open ' + esc(r.name) + '</a>';
+  }).withFailureHandler(function (e) { btn.disabled = false; out.textContent = e.message || String(e); }).adminExport(id);
 }
 
 load();

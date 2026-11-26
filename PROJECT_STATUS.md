@@ -2,7 +2,18 @@
 
 Last updated: 2026-11-22 · Updated by: Claude
 
-## Current phase: Platform build — **M3 submission done and live (2026-11-27).** Next: M4 (monitoring + CSV/codebook export). M1 and M2 done and deployed.
+## Current phase: Platform build — **M1–M4 done and deployed for the pilot (2026-11-27).** Next: pilot readiness (owner inputs below); M5 (psychometric assessments) needs its Phase 6 specification first.
+
+### Completed in this stage (M4)
+- *School admin* has three tabs: **Schools**, **Responses** (counts per school × survey version, flagged rows, last received) and **Export data** (one click per survey version → new private export spreadsheet with codes, labels, codebook, status tokens, about). Rules in DEC-30; how-to in `apps-script/README.md`.
+- Codebook and value labels are generated from the instrument JSON by the shared engine (`web/src/engine/export.ts`), so new instruments need no code changes.
+- Research exports include only responses with research permission (STU_L07 = Yes for Class 11–12 students); contact requests are never exported.
+
+### Tests performed (M4)
+- `web`: **256 pass** (10 new: codebook matches the server's columns for all four instruments, every coded variable has its value labels, contact requests excluded, labels for single/multi/dynamic options, tokens kept).
+- `apps-script`: **23 pass** (3 new: summary counts and unknown schools; export keeps only research-permission rows and re-protects formula text; instruments without a gate export every row).
+- Dialog views checked in a local harness on the real logic (counts, totals, export success and "no responses yet"), then **live**: the real dialog shows the three tabs, *Responses* says "No responses yet", *Export data* lists the four surveys and answers "There are no responses for STU_7_10_V1.1 yet".
+- **Not yet checked live:** an export with real rows (no responses exist since the test data was removed). The first real export should be opened and spot-checked against its `R_` tab.
 
 ### Completed in this stage (M3)
 - **Server** (`apps-script/Submit.js` + `Api.js doPost`): validates link, school status, survey window, instrument offered, consent; re-checks every answer with the app's own engine (bundled into `Engine.js` by `npm run apps-script`); writes one row per response to `R_<version>` (created on first use) under one lock; idempotent on `submission_id`; `#SYSTEM_FILLED` → school code; formula-safe text; per-link rate limit; audit of submit/reject. Rules in DEC-29.
@@ -65,6 +76,7 @@ Added: `apps-script/**`, `web/src/{routing,school,mock-api}.ts`, `web/src/ui/lan
 2. **M3 — submission**: `doPost submit` (validate token/status/window/instrument/every answer against the JSON, idempotent on `submission_id`, one `appendRow` under lock), `R_<version>` tabs, fill `#SYSTEM_FILLED` with school_code, class/route mismatch flag, restricted contacts spreadsheet, outbox sender with backoff + jitter.
 
 ### Stage log
+- 2026-11-27: M4 monitoring and export built, deployed and checked live (256 web + 23 Apps Script tests). DEC-30.
 - 2026-11-27: M3 submission built, deployed and checked live (246 web + 20 Apps Script tests). DEC-29; LOG-014 open.
 - 2026-11-25: M2 deployed for the pilot (DEC-28). Live checks passed; teacher single-class label and admin confirmations fixed; test school closed.
 - 2026-11-22: M2 built and tested locally (237 web + 11 Apps Script tests). DEC-26, DEC-27; docs/22 v1.3.

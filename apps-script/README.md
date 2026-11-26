@@ -7,6 +7,7 @@ One Apps Script project, **bound to the research spreadsheet** `Beginners_Resear
 | `Core.js` | All logic: form checks, school codes, 256-bit tokens, activation rule, `school_info`. No Google services, so it is tested locally. |
 | `Store.js` | Reads and writes the tabs; `setupTabs_` creates them. |
 | `Api.js` | Public web app: `GET ?action=school_info&s=<token>` and `POST {action:"submit"}` (Google-side glue). |
+| `Monitor.js` | Response counts and research export tables (DEC-30). Tested locally. |
 | `Submit.js` | The submit rules: refusals, re-checking answers, duplicate check, row and contact-request building (DEC-29). Tested locally. |
 | `Engine.js`, `Instruments.js` | **Generated** by `npm run apps-script` in `/web` (the app's logic engine and the deployable instruments). Git-ignored; regenerate before every `clasp push`. |
 | `Admin.js` + `AdminDialog.html` | Staff admin inside the spreadsheet (menu **The Beginners → School admin**). Allow-listed accounts only (DEC-26). |
@@ -66,3 +67,10 @@ Every action is written to the `Audit` tab with the staff account and time.
 - Contact-request answers go to `Beginners_Restricted_Contacts` → `Contact_Requests` (created by *Set up / repair tabs*; ID in Script property `RESTRICTED_SPREADSHEET_ID`). Only the owner can open it; share it with the safeguarding lead alone.
 - `Audit` records `submit`, `reject` (with reason) and `create_tab`, never answer content.
 - The `flags` column lists anything for data review: `INVALID:…`, `MISSING_REQUIRED:…`, `ROUTE_CLASS_MISMATCH`, `LATE_SYNC`, `SOFT_RANGE:…`.
+
+## Monitoring and exports (M4)
+
+In *School admin*:
+- **Responses**: responses per school and survey version, total, rows with flags (check the `flags` column in the `R_` tab), last received.
+- **Export data** → *Create export*: makes a new private spreadsheet `Beginners_Export_<version>_<date time>` in your Drive with `about`, `data_codes`, `data_labels`, `codebook` and `status_tokens` tabs. Download any tab as CSV with *File → Download → Comma-separated values*. Only responses with research permission are included (Class 11–12 students who answered "Yes" to the research-use question; every response for surveys without that question). Support-contact answers are never included. Each export is logged in `Audit`.
+- Exports contain respondent data: keep them private, do not share their links widely, and delete old exports you no longer need.

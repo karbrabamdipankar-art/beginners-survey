@@ -27,7 +27,7 @@ await build({
 const { index, files } = buildRegistry();
 const registry = {};
 for (const e of index) {
-  registry[e.instrument_version_id] = { instrument: files[e.file], system_fill: e.system_fill, route_check: e.route_check };
+  registry[e.instrument_version_id] = { instrument: files[e.file], system_fill: e.system_fill, route_check: e.route_check, research_permission_yes: e.research_permission_yes };
 }
 writeFileSync(join(outDir, 'Instruments.js'), `${banner}var INSTRUMENT_REGISTRY = ${JSON.stringify(registry)};\n`);
 console.log(`Wrote Engine.js and Instruments.js (${index.length} instruments) to apps-script/`);

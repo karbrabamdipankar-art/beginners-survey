@@ -38,7 +38,7 @@ A web platform to (1) run research surveys of students and teachers in Classes 7
 - Plain, respectful language in UI text. UI strings in a translation file (Khasi/Garo translations come later).
 
 ## Current milestone
-**M4 — Monitoring and exports** (docs/22 §9): response counts per school/instrument, CSV + codebook export (admin only). M1–M3 are built and deployed for the pilot (see PROJECT_STATUS.md). Run `npm test` in `/web`, then `npm run apps-script` and `node --test "apps-script/test/*.test.mjs"` after any change. Script updates: regenerate, `clasp push`, redeploy to the same deployment ID (apps-script/README.md).
+**Pilot readiness.** M1–M4 (renderer, school links, submission, monitoring + export) are built and deployed for the pilot; see PROJECT_STATUS.md. Open items need owner input (consent text, support-contact follow-up LOG-014, real schools, organisation account). **M5 — assessments** (`kind: assessment`, scoring, reports) waits for its Phase 6 specification. Run `npm test` in `/web`, then `npm run apps-script` and `node --test "apps-script/test/*.test.mjs"` after any change. Script updates: regenerate, `clasp push`, redeploy to the same deployment ID (apps-script/README.md).
 
 ## Owner inputs still needed (ask when the milestone needs them)
 - Organisation Google Workspace account to own the Sheets and the script (strongly preferred over personal Gmail)
